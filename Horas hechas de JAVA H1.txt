@@ -1,0 +1,418 @@
+Horas echas de JAVA: H1
+                                     H1
+                                     H1
+                                     H1
+                                     H1
+                                     H1
+------------------------------------------------
+                                    H1
+                                    H1
+                                    H1
+                                    H1
+                                    H1
+                                    H1
+
+Videos vistos: https://www.youtube.com/watch?                                                        
+                       v=tEwLE3WmraA&ab_channel
+                       =EDteam
+
+Notas importantes: Con (alt + z) quita la barra                     
+                                                     horizontal
+                                Con (shif + alt + f) Formatea el          
+                                                              codigo
+
+
+Etiquecas ya utilizadas: H1 A H6
+------------------------------------------------
+                    párrafos <p> y saltos de 
+                               línea <br>  
+------------------------------------------------
+                            "strong","em" y "u"
+
+
+-. <strong>  Strong(fuerte)                Muestra el 
+                                                             texto en
+                                                             negrita y 
+                                                             lo resalta
+
+
+-. <em>       Emphasis(énfasis)         Muestra el 
+                                                            texto en 
+                                                           cursiva para
+                                                           darle énfasis
+
+
+-. <u>         Underline (subrayado)  Subraya el 
+                                                          texto
+------------------------------------------------
+                              "div" y "span"
+                       
+¿Qué son "div" y "span"?
+
+Ambas son etiquetas contenedoras. No hacen nada visible por sí mismas, pero agrupan y organizan contenido. Su verdadero poder aparece  cuando las usas con CSS o JavaScript.
+.....................................................................................................
+"div"       De bloque              Agrupar secciones 
+                                             grandes                    
+                                             (párrafos, imágenes,
+                                             formularios, etc.) 
+
+"span"   En línea (inline)    Agrupar pequeñas  
+                                           partes dentro del texto 
+                                           (palabras, frases)
+
+.....................................................................................................
+
+VS: DIFERENCIA PRINCIPAL
+
+"div"                                                               
+
+Elemento de bloque.
+
+Se usa para secciones grandes.
+
+Salta a la siguiente línea.
+
+Se puede usar para dividir la página en 
+"cajas" o "columnas".
+
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+
+"span"
+
+Elemento en línea.
+
+Se usa dentro de textos.
+
+No interrumpe el flujo del texto.
+
+Se usa para modificar palabras específicas.
+
+.....................................................................................................
+
+¿CUÁNDO USAR CADA UNO?
+
+
+                                   "div"
+ Agrupar  varios párrafos, imágenes, formularios... 
+
+                                   
+                                 "span"
+       Dar estilo solo a una palabra  o frase.
+
+
+                                 "div"
+Crear secciones de una página (manú, pie de 
+                      página, artículos).
+
+
+                              "span" 
+         Resaltar una palabra en un párrafo.    
+
+------------------------------------------------
+
+                              "img"
+
+¿Qué es "img"?
+
+La etiqueta "img" se utiliza para mostrar imágenes en una página HTML. Es una etiqueta vacía, lo que significa que no tiene contenido dentro dentro y no se cierra con </img>, solo se usa así:
+
+<img src="ruta-de-la-imagen" alt="Texto alternativo">
+
+.....................................................................................................
+
+src = source = fuente de la imagen.
+
+Es la ruta o dirección donde está la imagen.
+
+<img src="foto.jpg"
+
+.....................................................................................................
+
+alt = texto alternativo
+
+<img src="perfil.png" alt="foto de perfil">
+
+.....................................................................................................
+
+<h2>Mi foto de perfil</h2>
+<img src="yo.jpg" alt="foto en blanco" width="200">
+
+------------------------------------------------
+
+                           Fecha: 7/17/2025
+
+
+¿Qué es una lista?
+
+Una lista es un conjunto de elementos (ítems) mostrados uno debajo del otro. HTML tiene dos tipos principales de listas:
+
+<ol> - lista ordenada
+
+. Muestra los elementos con números, letras o romanos.
+
+.Se usa cuando el orden importa (pasos, rankings, instrucciones).
+
+Ejemplo:
+
+<ol>
+    <li>Despertar</li>
+    <li>Entrenar</li>
+    <li>Desayunar</li>
+</ol>
+
+Se verá así:
+
+1. Despertar.
+2. Entrenar.
+3. Desayunar.
+
+Atributos de <ol>:
+
+. type: cambia el estilo de numeración.
+
+1                            1,2,3... (por defecto)
+A                           A,B,C...
+a                           a,b,c...
+I                            I,II,III...
+i                            i,ii,iii...
+
+. start: define el número inicial.
+
+<ol start="5">
+    <li>Elemento</li>
+    <li>Otro</li>
+</ol>
+
+.....................................................................................................
+
+<ul> - Lista no ordenada
+
+. Muestra los elementos con viñetas(puntos).
+.Se usa cuando el orden no importa(características, compras, ideas).
+
+Ejemplo:
+
+<ul>
+   <li>Manzana</li>
+   <li>Banana</li>
+   <li>Fresa</li>
+</ul>
+
+Se verá asi:
+
+. Manzana
+. Banana
+. Fresa
+
+Atributo de <ul>:
+
+. type (solo en HTML antiguo, no recomendado ahora)
+
+. disc (●) <- predeterminado
+. circle (○)
+. square (■)
+
+Ejemplo (aunque se recomienda hacerlo con CSS hoy en día):
+
+<ul type="square">
+    <li>Elementos</li>
+</ul>
+
+.....................................................................................................
+
+<li> - List Item (Elemento de Lista)
+
+Se usa dentro de <ol> o <ul> para agregar un ítem:
+
+<ul>
+   <li>Uno</li>
+   <li>Dos</li>
+</ul>
+
+No se puede usar <li> sin estar dentro de una lista.
+
+------------------------------------------------
+
+                                        "a"
+
+<a href=""> - Enlaces en HTML
+
+Sintaxis básica:
+
+<a href="URL-del-enlace">Texto que se 
+muestra</a>
+
+
+<a>                         inicia el enlace (anchor = 
+                              "ancla").
+
+href=""                  "Hypertext REFerence", indica a 
+                             dónde lleva el enlace.
+
+Texto                    Es lo que el usuario ve y puede 
+                             hacer clic.
+
+</a>                      Cierra el enlace.
+
+
+.....................................................................................................
+
+
+Enlace que abre en una nueva pestaña:
+
+<a href="https://youtube.com" target="_blank">Ir a 
+             Youtube</a>
+
+.....................................................................................................
+
+¿Qué es "mailto:"?
+
+Es un tipo de enlace especial que se usa para enviar correos electrónicos desde HTML.
+
+¿Para qué sirve?
+
+Cuando alguien hace clic en ese enlace, se abre el programa de correo predeterminado del usuario (como Gmail, Outlook, etc.), y ya con tu dirección escrita en el destinatario.
+
+<a href="mailto:nombre@gmail.com">Enviar correo a la persona</a>
+
+¿Qué es href?
+
+href significa Hypertext Reference (referencia de hipervínculo).
+
+Es un atributo del elemento <a> que le dice al navegador a dónde debe llevarte cuando haces clic en el enlace.
+
+¿Qué es un id en HTML?
+
+El atributo id sirve para darle un nombre único a cualquier elemento HTML.
+
+Con ese nombre puedes:
+. Vincular enlaces internos.
+.Usar CSS o JavaScript para afectar ese elemnto específico (más adelante verás esto).
+
+Ejemplo de uso de id:
+
+<h2 id="fin">Gracias por leer</h2>
+
+Y luego arriba puedes poner:
+
+<a href="#fin"> Ir al final de la página</a>
+
+mailto:                    Abrir el correo para enviar a     
+                               una dirección específica
+
+href                        Decir a dónde debe llevar el  
+                               enlace
+
+id                            Marcar un lugar en el 
+                               documento para poder enlazar o 
+                               identificarlo
+
+------------------------------------------------
+
+                            ."table", "tr", "td", "th".
+
+
+"table"                    Crea la tabla
+"tr"                       Fila de la tabla (table row)           
+"td"                       Celda de datos (table data)
+"th"                       celda de encabezado (table header)
+
+
+.<table>
+
+Es el contenedor principal. Todo lo que tenga que ver con la tabla va dentro de esta etiqueta.
+
+<table>
+    <!-- aquí dentro va todo lo demás -->
+</table>
+
+ 
+.<tr> - Table Row (Fila)
+
+Cada <tr> representa una fila horizontal. Dentro de cada fila, se colocan celdas <td> o <th>.
+
+<tr>
+    <!-- aquí van celdas -->
+</tr>
+
+
+<td> - Table Data (celda de datos)
+
+Representa una celda común, es decir, datos normales dentro de una fila.
+
+<td>Jose</td>
+<td>17 años</td>
+<td>Calistenia</td>
+
+<th> - Table Header (Encabezado)
+
+Es como <td>, pero para los títulos o encabezados de la tabla. Se ve en negrita y centrado por defecto.
+
+<th>Nombre</th>
+<th>Edad</th>
+<th>Pasatiempo</th>
+
+
+<h2>Tabla de ejemplo</h2>
+
+<table border="1"
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Pasatiempo</th>
+  </tr>
+
+  <tr>
+    <td>Jose</td>
+    <td>17</td>
+    <td>Programar</td>
+  </tr>
+
+  <tr>
+    <td>Angel</td>
+    <td>17</td>
+    <td>Calistenia</td>
+  </tr>
+</table>
+
+
+--------------------------------------------------------------------------------------
+
+                   "header"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HTML Semántico:  nav, main, article, section, footer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
