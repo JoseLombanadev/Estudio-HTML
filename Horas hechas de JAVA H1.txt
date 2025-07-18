@@ -11,6 +11,13 @@ Horas echas de JAVA: H1
                                     H1
                                     H1
                                     H1
+-----------------------------------------------
+                                    H1
+                                    H1 
+                                    H1
+                                    H1 
+                                    H1 
+                                    H
 
 Videos vistos: https://www.youtube.com/watch?                                                        
                        v=tEwLE3WmraA&ab_channel
@@ -381,6 +388,155 @@ Es como <td>, pero para los títulos o encabezados de la tabla. Se ve en negrita
                    "header"
 
 
+¿Para qué sirve <header>?
+
+Un <header> se usa para incluir elementos como:
+
+ . El título del sitio o sección.
+ . Un logotipo.
+ . Una barra de navegación (<nav>).
+ . Un eslogan o mensaje de bienvenida.
+ . Menús o enlaces importantes.
+ 
+ ....................................................................................
+
+¿Dónde se coloca? 
+
+Puede usarse en dos niveles:
+
+Global(Principal)       Al principio de la página.         Encima de todo en <body>
+                        Representa la cabesera general. 
+
+
+De sección              Dentro de una <section>,           Como cabera de una sección
+                        <article>, etc.                      
+
+
+....................................................................................
+
+¿Qué puede contener <header>?
+
+Dentro de <header > puedes poner casi cualquier elemento como:
+
+. <h1> a <h6> -> títulos
+. <img> -> Logos o imágenes
+. <p> -> Frases o eslóganes
+. <button> -> Botones de llamada a la accíon (como "Iniciar sesión")
+
+...................................................................................
+
+¿Qué NO debe ir dentro de <header>?
+
+. Contenido principal de la página (ese va en <main>).
+. Artículos completos.
+. Formularios largos o secciones independientes.
+
+...................................................................................
+
+¿Por qué es útil usar <header> correctamente?
+
+. Mejora el SEO (los motores de búsqueda entienden mejor tu estructua).
+. Mejora la accesibilidad (lectores de pantalla leen con más claridad).
+. Hace tu código más organizado y profesional.
+
+---------------------------------------------------------------------------------
+
+
+                            "nav"
+
+¿Qué es <nav>?
+
+La etiqueta <nav> en HTML5 es una etiqueta semántica que se usa
+para agrupar enlaces de navegación importantes en una página web.
+Es decir, sirve para contener el menú o los botones/enlaces que
+permiten al usuario moverse entre las secciones del sitio.
+
+................................................................................
+
+¿Cómo se usa?
+
+<nav>
+ <ul>
+  <li><a href="#inicio">Inicio</a></li>
+  <li><a href="#servicios">Servicios</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+ </ul>
+</nav>
+
+................................................................................
+
+
+¿Qué puede contener <nav>?
+La etiqueta <nav> puede contener:
+
+. <a> -> Enlaces (¡lo más común!).
+. <ul> o <ol> -> Listas para organizar los enlaces.
+. <button> -> Botones (si estás creando un menú interactivo).
+. <div> o <span> si vas a usar estilos o clases.
+
+...............................................................................
+
+¿Cuándo debes usar <nav>?
+
+Usa <nav> solo para navegación principal o importante, por ejemplo:
+
+. El menú principal de tu página (arriba del todo).
+. Menú lateral o de secciones (sidebar).
+. Navegación entre artículos, productos, perfiles, etc.
+
+X No uses <nav> para enlaces sueltos no relacionados con navegación
+
+----------------------------------------------------------------------------
+
+
+                         "main"
+
+
+
+¿Qué es?                          Contenedor del contenido principal de una página.
+
+¿Para qué sirve?                  Para definir lo más importante de la página.
+
+¿Cuántas veces usar?              Solo una vez por documento HTML.
+
+¿Dónde se coloca?                 Después del <header> y fuera del <nav> <footer>, etc.
+
+¿Qué puede contener?              <section>, <article>, <div>, texto, imágenes, formularios, etc.
+
+¿Por qué usarlo?                  Mejora la accesibilidad, el SEO y la organización de tu sitio.
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+                     "article"
+
+
+¿Para qué sirve <article>?
+
+Airve para identificar una unidad completa de contenido.
+
+Una publicación de blog                   Sí
+
+Una noticia en un periódico               Sí
+
+Un comentario de usuario                  Sí
+
+Un producto en una tienda onlin           Sí
+
+un bloque de texto suelto                 X No necesariamente
+
+
+......................................................................................................................
+
+
+
+¿Como funciona?
+
+La etiqueta <article> se usa para encerrar contenido autónomo.
+Internamente, puedes colocarle lo que quieras:
+títulos, imágenes, texto, listas, videos, etc.
+Y sí, también puedes poner artículos dentro de otros artículos, si uno depende del otro 
+(como un comentario dentro de un post principal).
 
 
 
@@ -389,13 +545,7 @@ Es como <td>, pero para los títulos o encabezados de la tabla. Se ve en negrita
 
 
 
-
-
-
-
-
-
-HTML Semántico:  nav, main, article, section, footer
+HTML Semántico:    section, footer
 
 
 
