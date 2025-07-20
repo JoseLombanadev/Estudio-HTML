@@ -23,10 +23,13 @@ Horas echas de JAVA: H1
                                     H1
                                     H1
 -------------------------------------------
-                                    
+                                    H1
+                                    H1 
+                                    H1 
+-------------------------------------------                        
 
 
-                                    
+
 Videos vistos: https://www.youtube.com/watch?                                                        
                        v=tEwLE3WmraA&ab_channel
                        =EDteam
@@ -661,13 +664,45 @@ sentido
 -----------------------------------------------
 
 
-                         ""
+                         ""footer"
 
 
+¿Qué es <footer>?
 
+La etiqueta <footer> representa el pie de página de una sección o de todo el documento HTML Contiene información relacionada con la parte que la rodea, como:
 
+. Autor del contenido
+. Derechos de autor
+. Enlaces de contacto 
+. Enlaces relacionados
+. Información legal o enlaces al aviso de privacidad
 
-HTML Semántico:    footer
+...................................................
+
+¿Para qué sirve?
+
+Sirve para mostrar información final o complementaria en un sitio web o dentro de una sección específica. Es importante porque:
+
+. Mejora la estructura semántica del HTML
+. Facilita la accesibilidad para los lectores y los motores de búsqueda
+. Agrupa contenido que no forma parte del cuerpo principal, pero es útil 
+
+....................................................
+
+¿Cómo funciona?
+
+Puedes colocar un <footer> al final del documento, o dentro de secciones, artículos, aside, etc.. Su contenido es flexible: puedes incluir texto, enlaces, imágenes, íconos, etc.
+
+......................................................
+
+Ejemplo práctico:
+
+<footer>
+  <p>© 2025 Jose Angel Lombana. Todos los derechos reservados.</p>
+  <p>Contacto: joseangel@gmail.com</p>
+<footer>
+
+-------------------------------------------------------
 
 
 
