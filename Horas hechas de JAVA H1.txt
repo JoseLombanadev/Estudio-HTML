@@ -4,21 +4,28 @@ Horas echas de JAVA: H1
                                      H1
                                      H1
                                      H1
-------------------------------------------------
+-------------------------------------------
                                     H1
                                     H1
                                     H1
                                     H1
                                     H1
                                     H1
------------------------------------------------
-                                    H1
-                                    H1 
+-------------------------------------------
                                     H1
                                     H1 
+                                    H1
+                                    H1 
                                     H1 
                                     H1
-
+-------------------------------------------
+                                    H1
+                                    H1
+                                    H1
+-------------------------------------------
+                                    H
+                                    H 
+                                    H
 Videos vistos: https://www.youtube.com/watch?                                                        
                        v=tEwLE3WmraA&ab_channel
                        =EDteam
@@ -30,10 +37,10 @@ Notas importantes: Con (alt + z) quita la barra
 
 
 Etiquecas ya utilizadas: H1 A H6
-------------------------------------------------
+-------------------------------------------
                     párrafos <p> y saltos de 
                                línea <br>  
-------------------------------------------------
+-------------------------------------------
                             "strong","em" y "u"
 
 
@@ -51,13 +58,13 @@ Etiquecas ya utilizadas: H1 A H6
 
 -. <u>         Underline (subrayado)  Subraya el 
                                                           texto
-------------------------------------------------
+-------------------------------------------
                               "div" y "span"
                        
 ¿Qué son "div" y "span"?
 
 Ambas son etiquetas contenedoras. No hacen nada visible por sí mismas, pero agrupan y organizan contenido. Su verdadero poder aparece  cuando las usas con CSS o JavaScript.
-.....................................................................................................
+...........................................
 "div"       De bloque              Agrupar secciones 
                                              grandes                    
                                              (párrafos, imágenes,
@@ -67,7 +74,7 @@ Ambas son etiquetas contenedoras. No hacen nada visible por sí mismas, pero agr
                                            partes dentro del texto 
                                            (palabras, frases)
 
-.....................................................................................................
+...........................................
 
 VS: DIFERENCIA PRINCIPAL
 
@@ -82,7 +89,7 @@ Salta a la siguiente línea.
 Se puede usar para dividir la página en 
 "cajas" o "columnas".
 
-IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 "span"
 
@@ -94,7 +101,7 @@ No interrumpe el flujo del texto.
 
 Se usa para modificar palabras específicas.
 
-.....................................................................................................
+...........................................
 
 ¿CUÁNDO USAR CADA UNO?
 
@@ -115,7 +122,7 @@ Crear secciones de una página (manú, pie de
                               "span" 
          Resaltar una palabra en un párrafo.    
 
-------------------------------------------------
+-------------------------------------------
 
                               "img"
 
@@ -125,7 +132,7 @@ La etiqueta "img" se utiliza para mostrar imágenes en una página HTML. Es una 
 
 <img src="ruta-de-la-imagen" alt="Texto alternativo">
 
-.....................................................................................................
+...........................................
 
 src = source = fuente de la imagen.
 
@@ -133,18 +140,18 @@ Es la ruta o dirección donde está la imagen.
 
 <img src="foto.jpg"
 
-.....................................................................................................
+...........................................
 
 alt = texto alternativo
 
 <img src="perfil.png" alt="foto de perfil">
 
-.....................................................................................................
+...........................................
 
 <h2>Mi foto de perfil</h2>
 <img src="yo.jpg" alt="foto en blanco" width="200">
 
-------------------------------------------------
+-------------------------------------------
 
                            Fecha: 7/17/2025
 
@@ -190,7 +197,7 @@ i                            i,ii,iii...
     <li>Otro</li>
 </ol>
 
-.....................................................................................................
+...........................................
 
 <ul> - Lista no ordenada
 
@@ -225,7 +232,7 @@ Ejemplo (aunque se recomienda hacerlo con CSS hoy en día):
     <li>Elementos</li>
 </ul>
 
-.....................................................................................................
+...........................................
 
 <li> - List Item (Elemento de Lista)
 
@@ -238,7 +245,7 @@ Se usa dentro de <ol> o <ul> para agregar un ítem:
 
 No se puede usar <li> sin estar dentro de una lista.
 
-------------------------------------------------
+-------------------------------------------
 
                                         "a"
 
@@ -262,7 +269,7 @@ Texto                    Es lo que el usuario ve y puede
 </a>                      Cierra el enlace.
 
 
-.....................................................................................................
+...........................................
 
 
 Enlace que abre en una nueva pestaña:
@@ -270,7 +277,7 @@ Enlace que abre en una nueva pestaña:
 <a href="https://youtube.com" target="_blank">Ir a 
              Youtube</a>
 
-.....................................................................................................
+...........................................
 
 ¿Qué es "mailto:"?
 
@@ -314,7 +321,7 @@ id                            Marcar un lugar en el
                                documento para poder enlazar o 
                                identificarlo
 
-------------------------------------------------
+-------------------------------------------
 
                             ."table", "tr", "td", "th".
 
@@ -383,7 +390,7 @@ Es como <td>, pero para los títulos o encabezados de la tabla. Se ve en negrita
 </table>
 
 
---------------------------------------------------------------------------------------
+-------------------------------------------
 
                    "header"
 
@@ -398,7 +405,7 @@ Un <header> se usa para incluir elementos como:
  . Un eslogan o mensaje de bienvenida.
  . Menús o enlaces importantes.
  
- ....................................................................................
+ ..........................................
 
 ¿Dónde se coloca? 
 
@@ -412,7 +419,7 @@ De sección              Dentro de una <section>,           Como cabera de una s
                         <article>, etc.                      
 
 
-....................................................................................
+...........................................
 
 ¿Qué puede contener <header>?
 
@@ -423,7 +430,7 @@ Dentro de <header > puedes poner casi cualquier elemento como:
 . <p> -> Frases o eslóganes
 . <button> -> Botones de llamada a la accíon (como "Iniciar sesión")
 
-...................................................................................
+...........................................
 
 ¿Qué NO debe ir dentro de <header>?
 
@@ -431,7 +438,7 @@ Dentro de <header > puedes poner casi cualquier elemento como:
 . Artículos completos.
 . Formularios largos o secciones independientes.
 
-...................................................................................
+...........................................
 
 ¿Por qué es útil usar <header> correctamente?
 
@@ -439,7 +446,7 @@ Dentro de <header > puedes poner casi cualquier elemento como:
 . Mejora la accesibilidad (lectores de pantalla leen con más claridad).
 . Hace tu código más organizado y profesional.
 
----------------------------------------------------------------------------------
+-------------------------------------------
 
 
                             "nav"
@@ -451,7 +458,7 @@ para agrupar enlaces de navegación importantes en una página web.
 Es decir, sirve para contener el menú o los botones/enlaces que
 permiten al usuario moverse entre las secciones del sitio.
 
-................................................................................
+...........................................
 
 ¿Cómo se usa?
 
@@ -463,7 +470,7 @@ permiten al usuario moverse entre las secciones del sitio.
  </ul>
 </nav>
 
-................................................................................
+........................................... 
 
 
 ¿Qué puede contener <nav>?
@@ -474,7 +481,7 @@ La etiqueta <nav> puede contener:
 . <button> -> Botones (si estás creando un menú interactivo).
 . <div> o <span> si vas a usar estilos o clases.
 
-...............................................................................
+...........................................
 
 ¿Cuándo debes usar <nav>?
 
@@ -486,7 +493,7 @@ Usa <nav> solo para navegación principal o importante, por ejemplo:
 
 X No uses <nav> para enlaces sueltos no relacionados con navegación
 
-----------------------------------------------------------------------------
+-------------------------------------------
 
 
                          "main"
@@ -506,14 +513,14 @@ X No uses <nav> para enlaces sueltos no relacionados con navegación
 ¿Por qué usarlo?                  Mejora la accesibilidad, el SEO y la organización de tu sitio.
 
 
---------------------------------------------------------------------------------------------------------------------
+-------------------------------------------
 
                      "article"
 
 
 ¿Para qué sirve <article>?
 
-Airve para identificar una unidad completa de contenido.
+Sirve para identificar una unidad completa de contenido.
 
 Una publicación de blog                   Sí
 
@@ -526,7 +533,7 @@ Un producto en una tienda onlin           Sí
 un bloque de texto suelto                 X No necesariamente
 
 
-......................................................................................................................
+...........................................
 
 
 
@@ -538,14 +545,128 @@ títulos, imágenes, texto, listas, videos, etc.
 Y sí, también puedes poner artículos dentro de otros artículos, si uno depende del otro 
 (como un comentario dentro de un post principal).
 
+...........................................
+
+
+Estructura básica de <article>:
+
+<article>
+  <h2>Título del artículo</h2>
+  <p>Contenido independiendte que tiene sentido por sí mismo.</p>
+</article>
+
+...........................................
+
+¿Cuándo usar <article> y cuándo no?
+
+Usa <article> cuando:
+
+El contenido puede republicarse o verse de forma aislada y seguir teniendo sentido.
+
+El contenido representa una entrada o pieza individual dentro de un conjunto mayor.
+
+No uses <article> cuando:
+
+El texto forma parte del cuerpo general de la página (usa <section> o solo <p>).
+
+Es contenido auxiliar, dexorativo o dependiente (usa <aside>, <div>, etc).
+
+...........................................
+
+¿Que puede ir dentro de <article>?
+
+. <h1> a <h6> -> título del artículo
+. <p> -> párrafos
+. <img> -> imágenes
+. <ul> / <ol> -> listas
+. <footer> -> para autor, fecha, enlaces
+. <section> -> si el artículo tiene partes internas
+. Otro <article> -> Si hay artículos relacionados o comentarios
+
+-------------------------------------------
+
+                   "section"
+
+¿Qué es <section>?
+
+La etiqueta <section> se usa para agrupar contenido relacionado dentro de una página web.
+Es una etiqueta semántica, como <article> o <header>, que indica una sección independiente del documento
+
+...........................................
+
+¿Para qué sirve?
+
+Sirve para dividir tu contenido en bloques temáticos. Imagina que tienes una  sola página con muchas partes distintas (como un blog, una guía, o una landing page).
+Cada parte que tenga su propio propósito puede ur dentro de un <section>.
+
+...........................................
+
+¿Cómo funciona?
+
+. Debe tener un título propio, usando <h2>, <h3>, etc.
+
+. Va dentro del <main>, de un <article>, o incluso por sí sola si tiene sentido.
+
+...........................................
+
+
+¿Cuándo usar <section>?
+
+úsalo si...                                   X No lo uses si...
+
+Agrupas  contenido con un título claro        Solo estás agrupando estilos 
+                                              visuales
+
+La sección tiene sentido por sí sola          El contenido no tiene relación 
+                                              temática
+
+Está en el <main>, <article> o <aside>        Es solo un <div> para diseño visual
+
+
+............................................
+
+
+Ejemplo práctico:
+
+<main>
+  <section>
+    <h2>Beneficios de hacer ejercicio</h2>
+    <p>Hacer ejercicio regularmente mejora la salud física y mental.</p>
+</section>
+
+<section>
+  <h2>Consejos para empezar</h2>
+  <p>Comienza con caminatas diarias y aumenta la intensidad progresivamente.
+</section>
+</main>
+
+
+.............................................
+
+
+¿En qué se diferencia de <article>?
+
+<section>                                <article>
+
+Parte de un todo                         Puede vivir por sí mismo (como un post)
+
+Agrupa contenido con un título           Es un contenido completo (como una 
+                                         reseña)
+
+Necesita más contexto para tener         Tiene sentido incluso fuera del sitio
+sentido
+
+
+-----------------------------------------------
+
+
+                         ""
 
 
 
 
 
-
-
-HTML Semántico:    section, footer
+HTML Semántico:    footer
 
 
 
