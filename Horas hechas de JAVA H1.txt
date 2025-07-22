@@ -34,9 +34,23 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1
                                     H1
-                                    M10
+                                    Minútos+10
 --------------------------------------------
+                                    H1
+                                    H1
+                                    H1
+                                    H1
+                                    H1   
+---------------------------------------------
                                     H
+
+
+
+
+
+
+
+
 Videos vistos: https://www.youtube.com/watch?                                                        
                        v=tEwLE3WmraA&ab_channel
                        =EDteam
@@ -913,7 +927,60 @@ La etiqueta <q> se usa para citas breves dentro de un párrafo. A diferencia de 
 
 ---------------------------------------------------------------------------------
 
-                                   
+                                 <code>                  
+
+
+¿Qué hace <code>?
+
+La etiqueta <code> muestra texto con estilo monoespaciado, ideal para comandos,
+funciones o fragmentos de código en cualquier lenguaje (HTML, JavaScript, python, etc.)
+
+----------------------------------------------------------------------------------
+
+
+                                  <abbr>
+
+
+<¿Cómo funciona <abbr>?
+
+La etiqueta <abbr> permite escribir abreviaciones (como "HTML","ONU","NASA","CEO",etc.) y mostrar su significado completo cuando el usuario pasa el mouse por encima. Se usa así:
+
+<abbr title="HyperText Markup Language">HTML</abrr>
+
+----------------------------------------------------------------------------------
+
+                                  <cite>
+
+Esta etiqueta se usa para citar el título de una obra, como un libro,una peícula, una canción, un artículo, etc. No se usa para citar personas o frases, sino el nombre de una fuente creativa o intelectual.
+
+¿Cómo se usa?
+
+Se coloca el títuo de la obra dentro de la etiqueta <cite> para indicar que es el nombre de algo que ha sido creado (una bra):
+
+<cite>Cien años de soledad</cite>
+
+En un contexto, podrías escribir algo como:
+"El libro <cite>Cien años de soledad</cite> fue escrito por Gabriel García Márquez."
+ 
+----------------------------------------------------------------------------------
+
+                                   <dfn>
+
+Que se utiliza para marcar la primera aparición o definición de un término en un texto. Al combinarla con el atributo "title", también se puede mostrar el significado al pasar el cursor por encima (esto es útil si luego aplicas CSS o JavaScript, aunque por ahora solo usarás HTML).
+
+¿Cómo se usa <dfn>?
+
+<dfn title="HyperText Markup Language">HTML</dfn> es el lenguaje con el que se crean las páginas web.
+
+En este ejemplo, estás definiendo el término HTML y su significado está en el atributo "title".
+
+----------------------------------------------------------------------------------
+
+                                    <b>
+
+¿Qué es la etiqueta <b>?
+
+La etiqueta <b> sirve para resaltar texto en negrita, pero sin darle un énfasis especial o importancia semántica. Es decir, solo cambia la apariencia visual del texto, no su significado.
 
 
 
@@ -928,20 +995,6 @@ La etiqueta <q> se usa para citas breves dentro de un párrafo. A diferencia de 
 
 
 
-
-
-
-
-
-
-
-<code>
-
-<abbr>
-
-<cite>
-
-<dfn>
 
 
 
