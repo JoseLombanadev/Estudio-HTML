@@ -26,10 +26,17 @@ Horas echas de JAVA: H1
                                     H1
                                     H1 
                                     H1 
--------------------------------------------                        
-
-
-
+-------------------------------------------
+                                    H1 
+                                    H1 
+                                    H1 
+                                    H1 
+                                    H1 
+                                    H1
+                                    H1
+                                    M10
+--------------------------------------------
+                                    H
 Videos vistos: https://www.youtube.com/watch?                                                        
                        v=tEwLE3WmraA&ab_channel
                        =EDteam
@@ -705,6 +712,208 @@ Ejemplo práctico:
 -------------------------------------------------------
 
 
+                         "class"
+
+¿Para qué sirve?
+
+. Aplicar estilos CSS fácilmente:
+  Puedes decir: "Todos los elementos que tengan la clase rojo serán de color rojo."
+
+. Reutilizar estilos:
+  En lugar de repetir el mismo estilo una y otra vez, le das a varios elementos la misma clase.
+
+. Identificar elementos en JavaScript:
+  Puedes seleccionar todos los elementos con la misma clase y hacer algo con ellos (como ocultarlos, cambiarles el texto, etc).
+
+.........................................................
+
+
+¿Cómo funciona?
+
+Sintaxis general:
+
+<tag class=nombre-de-clase">Contenido</tag>
+
+Se pueden poner varias clases separadas por espacios:
+
+<tag class="clase1 clase2 clase3">Contenido</tag>
+
+Ejemplo:
+
+<p class="advertencia">Este párrafo muestra un mensaje de advertencia.</p>
+
+En CSS:
+
+.advertencia {
+  color: red;
+}
+
+.exito {
+  color: green;
+}
+
+
+............................................................
+
+
+Diferencia entre class e id:
+
+Atributo           Usado para              Se puede repetir
+
+class              Agrupar elementos       Sí
+                   similares
+
+id                 Identificar un          No (solo uno por 
+                   elemento único              página)
+                  
+------------------------------------------------------------
+
+                               "id"
+
+¿Qué es el atributo id?
+
+El atributo "id" en HTML sirve para identificar de forma única un solo elemento en una página. A diferencia de class, que puede repetirse en varios elementos, un "id" debe ser único: no puede haber dos elementos con el mismo "id" en la misma página.
+
+.............................................................
+
+¿Para qué sirve id?
+
+. Identificar un elemento para CSS o JavaScript
+  Aunque no estás usando CSS ni JavaScript todavía, es útil saber que el "id" permite aplicar estilos o hacer interacciones específicas con ese elemento en el futuro.
+
+. Navegación interna (anclas)
+  Puedes usar "id" para crear enlaces dentro de la misma página que te lleven a una parte específica (esto se llama navegación  de anclas).
+
+. Organizació  y estructua
+  A veces se usa "id" solo para identificar visualmente un elemento con propósitos
+  semánticos o para referencia en programación.
+
+...............................................................
+
+¿Cómo se usa "id"?
+
+El atributo se escribe así dentro de una etiqueta HTML:
+
+<p id="introduccion">Este párrafo tiene un id llamado "introduccion".</p>
+
+..................................................................
+
+Ejemplo con navegación interna (anclas)
+
+<a href="#seccion2">Ir a la sección 2</a>
+
+<h2 id="seccion2">sección 2</h2>
+<p>Este es el contenido de la sección 2.</p>
+
+...................................................................
+
+Reglas importantes.
+
+. El valor del "id" no puede empezar por un número (de preferencia).
+. Solo puedes usar un "id" por elemento.
+. No se repiten "id" en un mismo documento HTML.
+. Es sensible a mayúsculas y minúsculas.
+
+----------------------------------------------------------------------
+
+¿Qué significa "formatos de texto adicionales?
+
+Son etiquetas que se usan para dar contexto o formato especial a ciertos fragmentos de texto como:
+
+. Citas textuales
+. Fragmentos de código
+. Abreviaciones
+. Definiciones, etc.
+
+
+Etiquetas incluidas en ese tema:
+
+1: <blockquote> - Citas largas
+
+Sirve para citar textos largos o párrafos de otra fuente.
+Se suele usar con sangría visual.
+
+#Ejemplo:
+
+<blockquote>
+  La educación es el arma más poderosa que puedes usar para cambiar el mundo.
+</blockquote>
+
+.......................................................................
+
+2: <q> - Citas cortas (entre comillas)
+
+Para frases o palabras de alguien más, dentro de un párrafo.
+
+#Ejemplo:
+
+<p>Mi mamá siempre decía: <q>El respeto es la base de todo.</q></p>
+
+.......................................................................
+
+3: <code> - Código de programación
+
+Muestra un texto como si fuera código.
+Útil si hablas sobre comandos o fragmentos de HTML, CSS, etc.
+
+#Ejemplo:
+
+<p>Para crear un título, usa <code>&lt;h1&gt;</code>.</p>
+
+.........................................................................
+
+4: <abbr> - Abreviaturas
+
+Define una abreviatura.Al pasar el curso por encima, muestra el significado completo.
+
+#Ejemplo:
+
+<p>Estudio en el <abbr title="servicio Nacional de aprendizaje">SENA</abbr>.</p>
+
+..........................................................................
+
+5: <cite> - Citas de obras o autores
+
+Se usa  para nombrar el título de un libro, película, cnación o autor.
+
+#Ejemplo:
+
+<p><cite>El principito</cite> es una obra clásica de Antoine de Saint-Exupéry.</p>
+
+............................................................................
+
+6: <dfn> - Definiciones
+
+Marca una palabra que estás definiendo.
+
+#Ejemplo:
+
+<p><dfn>HTML</dfn> es el lenguaje que usamos para estructurar páginas web.</p>
+
+.............................................................................
+
+                            
+                                <blockquote>
+
+¿Qué es <blockquote>?
+
+La etiqueta <blockquote> se usa para citas textuales largas que provienen de otra fuente. Es decir, cuando copias un fragmento de texto de un libro, artículo,sitio web, etc., y quieres mostrarlo con claridad y respeto por su origen, se encierra dentro de <blockquote>
+
+# HTML interpreta esta etiqueta como una cita independiente
+# Visualmente, el navegador le da sangría (espacio hacia adentro) para diferenciarla del resto del texto.
+
+-------------------------------------------------------------------------------
+
+                                    <q>
+
+
+¿Qué es <q>?
+
+La etiqueta <q> se usa para citas breves dentro de un párrafo. A diferencia de <blockquote>, que se usa para citas largas y separadas, <q> es inline (va dentro del texto) y automáticamente coloca comillas.
+
+---------------------------------------------------------------------------------
+
+                                   
 
 
 
@@ -716,6 +925,23 @@ Ejemplo práctico:
 
 
 
+
+
+
+
+
+
+
+
+
+
+<code>
+
+<abbr>
+
+<cite>
+
+<dfn>
 
 
 
