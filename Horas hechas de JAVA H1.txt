@@ -42,7 +42,8 @@ Horas echas de JAVA: H1
                                     H1
                                     H1   
 ---------------------------------------------
-                                    H
+                                    H1
+                                    minùtos+29 
 
 
 
@@ -982,7 +983,50 @@ En este ejemplo, estás definiendo el término HTML y su significado está en el
 
 La etiqueta <b> sirve para resaltar texto en negrita, pero sin darle un énfasis especial o importancia semántica. Es decir, solo cambia la apariencia visual del texto, no su significado.
 
+Ejemplo:
 
+<p>Este es un <b>texto en negrita</b> que solo se ve màs fuerte visualmente.</p>
+
+¿Cuándo usar <b>?
+
+. Quieres resaltar palabra o frases visualmente.
+. No deseas decir que son importantes o urgentes (solo destacarlas por diseño).
+. No estás indicando una advertencia ni una definición.
+
+¿Cómo se usa?
+
+<b>Texto que quiero en negrita</b>
+
+Puedes usarlo dentro de párrafos, listas, encabezados, etc.
+
+---------------------------------------------------------------------------------
+
+
+                                      "i"
+
+¿Qué es <i>?
+
+La etiqueta <i> se usa para dar énfasis o resaltar palabras o frases, generalmente con cursiva, pero no necesariamente por importancia (eso sería <em>). Se utiliza en:
+
+. Palabras extranjeras
+. Pensamientos 
+. Términos técnicos
+. Nombres de obras
+. Diálogos o expresiones
+
+---------------------------------------------------------------------------------
+
+                                    "mark"
+
+La etiqueta <mark> sirve para resaltar un fragmento de texto, como si lo subrayaras con un marcador amarillo. Se usa mucho para destacar información importante en un párrafo.
+
+---------------------------------------------------------------------------------
+
+                                    "small"
+
+¿Para qué sirve <small>?
+
+Se utiliza para mostrar texto más pequeño, generalmente para notas al pie, aclaraciones o detalles secundarios dentro de un párrafo
 
 
 
