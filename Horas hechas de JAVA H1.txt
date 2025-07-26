@@ -44,6 +44,13 @@ Horas echas de JAVA: H1
 ---------------------------------------------
                                     H1
                                     minùtos+29 
+---------------------------------------------
+                                    H1 
+                                    H1 
+                                    H1 
+                                    H1 
+---------------------------------------------
+                                    H
 
 
 
@@ -1028,21 +1035,167 @@ La etiqueta <mark> sirve para resaltar un fragmento de texto, como si lo subraya
 
 Se utiliza para mostrar texto más pequeño, generalmente para notas al pie, aclaraciones o detalles secundarios dentro de un párrafo
 
+---------------------------------------------------------------------------------
+
+                                     "del"
+
+La etiqueta <del> sirve para indicar que un texto ha sido eliminado o ya no es válido, generalmente se muestra tachado. Es muy útil en:
+
+. Listas de precios (mostrar precio anterior).
+. Correcciones (mostrar texto eliminado).
+. Documentos donde se registran cambios.
+
+---------------------------------------------------------------------------------
+
+                                      "ins"
+
+. Se usa cuando quieres resaltar que algo es nuevo, que ha sido agregado depués o que cambia respecto a una versión anterior.
+
+. Normalmente se muestra subrayando por defecto en los navegadores (aunque puedes cambiar su estilo con CSS).
+
+---------------------------------------------------------------------------------
+
+                                       "sub"
+
+¿Para qué sirve <sub>?
+
+La etiqueta <sub> se usa para mostrar texto en subíndice, es decir, más pequeño y ligeramente más abajo que el texto normal. Se utiliza mucho para:
+
+. Fórmulas químicas
+. Expresiones matemáticas
+. Notas al pie o aclaraciones pequeñas
+
+---------------------------------------------------------------------------------
+
+                                        "sup"
+
+La etiqueta <sup> Sirve para mostrar texto en superíndice, es decir, más pequeño y elevado. Es útil para:
+
+. Potencias en matemáticas.
+. Notas al pie.
+. Unidades científicas.
+
+---------------------------------------------------------------------------------
 
 
+                                   "address"
 
 
+Sirve para mostrar información de contacto relacionada con el autor de un documento, un artículo, una empresa o una persona.
+
+¿Para qué se usa?
+
+. Para indicar direcciones físicas (calles, ciudades, etc.)
+. Para mostrar correos electrónicos o teléfonos.
+. Para dar información de contacto del autor de una página o sección.
+. Se utiliza normalmente en pies de página (footers) o al final de artículos,   
+  pero puede ir en cualquier parte donde se dé contacto.
+
+.................................................................................
+
+Características importantes:
+
+- Semánticamente, los navegadores y buscadores saben que es información de contacto, lo que ayuda al SEO.
+
+- No solo sirve para direcciones físicas, también puede contener emails, enlaces, teléfonos, redes sociales.
+
+- El texto dentro de <address> normalmente se muestra en cursiva por defecto, pero se puede cambiar con CSS.
+
+---------------------------------------------------------------------------------
+
+                                     "bdo"
+
+Significa Bi-Directional Override (anulación bidireccional).
+Sirve para cambiar la dirección del texto dentro del navegador, sin importar el idioma predeterminado de la página.
+
+.................................................................................
+
+¿Para qué se usa?
+
+- Para mostrar texto de derecha a izquierda (como el árabe o hebreo).
+- Para cambiar el orden de un texto por efectos visuales o de estilo.
+
+.................................................................................
+
+Sintaxis básica:
+
+<bdo dir="rtl">Texto al revés</bdo>
+. dir="rtl" -> Right To Left (de derecha a izquierda).
+. dir="ltr" -> Left To Right (de izquierda a derecha, es el normal).
+
+---------------------------------------------------------------------------------
+
+                             "Colores HTML RGB y RGBA"
+
+- Un valor de color RGB representa fuentes de luz ROJA, VERDE y AZUL.
+ 
+- Un valor de color RGBA es una extensión de RGB con un canal alfa (opacisas).
+
+.................................................................................
+
+En HTML, un color se puede especificar como un valor RGB, utilizando esta fórmula:
+
+rgb( rojo, verde, azul )
+
+---------------------------------------------------------------------------------
 
 
+                              "Colores HEX HTML"
 
+. Un color hexadecimal se especifica con: #RRGGBB, donde los números enteros hexadecimales RR (rojo), GG (verde) y BB (azul) especifican los componentes del color.
 
+---------------------------------------------------------------------------------
 
+                               "Colores HTML HSL y HSLA"
 
+. HSL significa tono, saturación y luminosidad.
+  Los valores de color HSLA son una extensión de HSL con un canal alfa (opacidad).
 
+Valores de color HSL.
 
+En HTML, un color se puede especificar utilizando tono, saturación y luminosidad (HSL) en la forma:
 
+hsl( tono , saturación , Luminosidad )
 
+---------------------------------------------------------------------------------
 
+                                      "map"
 
+¿Cómo funciona?
+
+- Se necesita una imagen: usas la etiqueta <img> como siempre.
+- Relacionas la imagen con un mapa: al <img> le pones el atributo 
+  usemap="#nombreMapa"
+- Creas el <map>: este contendrá áreas (<area>) que serán los "botones 
+  invisibles".
+- Defines las áreas: dentro del <map> usas <area> para especificar qué partes de 
+  la imagen son clicables.
+.................................................................................
+
+Estructura básica
+
+<img src="imagen.jpg" usemap="#mimapa">
+
+<map name="mimapa">
+  <area shape="rect" coords="34,44,270,350" href="pagina1.html" alt="zona 1">
+  <area shape="circle" coords="337,300,44" href="pagin2.html" alt="zone 2">
+  <area shape="poly" coords="130,136,200,180,220,300" href="pagina3.html" alt="Zona 3">
+
+.................................................................................
+
+Atributos importantes de <area>
+
+. shape: forma del área clicable.
+  . rect -> rectángulo.
+  . circle -> círculo.
+  . poly -> polígono (varios puntos).
+. coords: las coordenadas (en píxeles) sque delimitan el área.
+  . Rect: x1, y1, x2, y2 (esquina superior izq. y esquina infeior der.).
+  . Círculo: xCentro,yCentro,radio.
+  .Polígono: pares de x,y para cada vértice.
+. href: enlace al que lleva el área.
+.alt: texto alternativo (muy importante para accesibilidad).
+
+---------------------------------------------------------------------------------
 
 
