@@ -50,8 +50,9 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1 
 ---------------------------------------------
+                                 07/08/2025
+                                    H1
                                     H
-
 
 
 
@@ -1198,4 +1199,15 @@ Atributos importantes de <area>
 
 ---------------------------------------------------------------------------------
 
+                               "picture"
+
+Brinda a los desarrolladores web más flexibilidad para especificar recursos de imágenes.
+
+El <picture> elemento contiene uno o más <source> elementos, cada uno de los cuales hace referencia a diferentes imágenes mediante el "source"
+
+atributo. De esta forma, el navegador puede elegir la imagen que mejor se adapte a la vista o dispositivo actual.
+
+Cada <source> elemento tiene un media atributo que define cuándo la imagen es más adecuada.
+
+---------------------------------------------------------------------------------
 
