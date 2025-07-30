@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Practicando "picture"</title>
-    </head>
-    <body>
-        <header>
-            <h1>Ejercicios para memmorizar "picture"</h1>
-        </header>
-        <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicando "picture"</title>
+  </head>
+  <body>
+    <header>
+      <h1>Ejercicios para memmorizar "picture"</h1>
+    </header>
+    <main>
+      <h2>Ejercicio Uno: imagen simple con respaldo</h2>
 
+      <p>
+        <picture>
+          <source srcset="WIN_20250721_09_04_36_Pro.webp" />
+          <img src="WIN_20250721_09_04_31_Pro.jpg" alt="yo.jpg" />
+        </picture>
+      </p>
+      <br />
+      <hr />
+      <h2>Ejercicio Dos: Imagen adaptable según el ancho de la pantalla</h2>
 
-        </main>
-        <footer>
-            <p>Hecho por: Jose Angel Lombana</p>
-        </footer>
-    </body>
+      <picture>
+        <source
+          srcset="WIN_20250721_09_04_36_Pro.webp"
+          media="(min-width: 800px)"
+        />
+        <img src="WIN_20250721_09_04_31_Pro.jpg" alt="Foto personal" />
+      </picture>
+      <br />
+      <hr />
+      <h2>Ejercicio Tres: Imagen decorativa de fondo</h2>
+
+      <picture>
+        <source srcset="WIN_20250721_09_04_36_Pro.webp" />
+        <img src="WIN_20250721_09_04_31_Pro.jpg" alt="Mi propia imagen" />
+      </picture>
+      <br />
+      <hr />
+      <h2>Ejercicio Cuatro: Imagen en TRES resoluciones</h2>
+
+      <picture>
+        <source
+          srcset="WIN_20250721_09_04_36_Pro.webp"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="WIN_20250721_09_04_36_Pro.webp"
+          media="(min-width: 800px)"
+        />
+        <source srcset="WIN_20250721_09_04_36_Pro.webp" />
+        <img src="WIN_20250721_09_04_31_Pro.jpg" alt="imagen personal" />
+      </picture>
+      <br />
+      <hr />
+      <h2>Ejercicio Cinco: Imagen artística con varios formatos</h2>
+
+      <picture>
+        <source srcset="WIN_20250721_09_04_36_Pro.webp" />
+        <img src="WIN_20250721_09_04_31_Pro.jpg" alt="Imagen personal" />
+      </picture>
+    </main>
+    <footer>
+      <p>
+        Hecho por: <strong><em>Jose Angel Lombana</em></strong>
+      </p>
+    </footer>
+  </body>
 </html>

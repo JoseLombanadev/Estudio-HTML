@@ -43,17 +43,22 @@ Horas echas de JAVA: H1
                                     H1   
 ---------------------------------------------
                                     H1
-                                    minùtos+29 
+                                    minutos+29 
 ---------------------------------------------
                                     H1 
                                     H1 
                                     H1 
                                     H1 
 ---------------------------------------------
-                                 07/08/2025
+                                 07/28/2025
                                     H1
-                                    H
-
+---------------------------------------------
+                                 07/29/2025
+                                    H1 
+                                    H1 
+                                    H1 
+                                    H1 
+                                    Minutos+10
 
 
 
@@ -1210,4 +1215,91 @@ atributo. De esta forma, el navegador puede elegir la imagen que mejor se adapte
 Cada <source> elemento tiene un media atributo que define cuándo la imagen es más adecuada.
 
 ---------------------------------------------------------------------------------
+
+                                "Favicon"
+
+Una imagen de favicon se muestra a la izquierda del título de la página en la pestaña del navegador, de la siguiente manera:
+
+Para añadir un favicon a tu sitio web, guarda la imagen en el directorio raíz de tu servidor web o crea una carpeta en el directorio raíz llamada  "images" y guárdala allí. Un nombre común para una imagen de favicon es "favicon.ico"
+
+---------------------------------------------------------------------------------
+
+                                 "Title"
+
+Cada página web debe tener un título para describir el significado de la página.
+
+---------------------------------------------------------------------------------
+
+                                 "dl, dt, dd"
+
+¿Qué son?
+
+
+- <dl> (Description List):
+  Es el contenedor que guarda una lista de descripciones.
+  Se traduce como "lista de definiciones" o "lista descriptiva".
+
+- <dt> (Definition term):
+  Es el término o elemento que vas a describir.
+  (Ejemplo: una palabra, un concepto, un producto).
+
+- <dd> (Definition Description):
+  Es la descripción o explicación de ese término.
+  (Ejemplo: el significado, detalles o características).
+
+.................................................................................
+
+¿Para qué sirven?
+
+. Para hacer listas de conceptos con sus descripciones, como:
+ . Glosarios (palabra + significado).
+ . Preguntas y respuestas (FAQ).
+ . Productos (nombre + detalle).
+ . Horarios (actividad + hora).
+
+.................................................................................
+
+Nota: Son más semánticas que usar <ul> (listas normales), porque el navegador entiende que es un término con su explicación.
+
+.................................................................................
+
+¿Como se usan?
+
+<dl>       <!-- Abre la lista descriptiva -->
+  <dt>Termino 1</dt>    <!-- El término o palabra -->
+  <dd>Descripción del término 1</dd>   <!-- Explicación -->
+
+  <dt>Termino 2</dt>
+  <dd>Descripción del término 2</dd>
+</dl>
+
+---------------------------------------------------------------------------------
+
+                                    "iframe"
+
+¿Qué es <iframe>?
+
+Un iframe (Inline Frame) es una etiqueta HTML que sirve para incrustar contenido de otra página web dentro de la tuya, como si fuera una "ventana" que muestra otro sitio, documento o recurso.
+
+.................................................................................
+
+¿Para qué sirve?
+
+ . Insertar videos
+ . Mostrar mapas interactivos
+ . Incluir otros sitios web o páginas propias
+ . Mostrar documentos (PDF, formularios, presentaciones).
+
+.................................................................................
+
+Sintaxis básica:
+
+<iframe src="URL" width="600" height="400"></iframe>
+
+---------------------------------------------------------------------------------
+
+                                     ""
+
+
+
 
