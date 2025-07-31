@@ -59,11 +59,19 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1 
                                     Minutos+10
+-----------------------------------------------
+                                07/30/2025
+                                    H1 
+                                    H1 
+                                    H  
 
 
 
+.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
+Logros: ¡Me aprendi al detalle la estructura basica de HTML!.
 
+.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.
 
 Videos vistos: https://www.youtube.com/watch?                                                        
                        v=tEwLE3WmraA&ab_channel
@@ -1298,8 +1306,58 @@ Sintaxis básica:
 
 ---------------------------------------------------------------------------------
 
-                                     ""
+                                "HTML JavaScript"
 
+<script> Se utiliza  para definir un script del lado del clíente (JavaScript).
 
+Para seleccionar un elemento HTML, JavaScript suele utilizar el document.getElementById() método.
 
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+
+---------------------------------------------------------------------------------
+
+                                "¿Qué es <aside>"
+
+La etiqueta <aside> es un elemento semántico de HTML5.
+Se usa para contenido relacionado con el contenido principal de la página, pero que no es parte esencial de él.
+
+Sirve para mostrar información complementaria: anuncios, barras laterales, datos extra, enlaces relacionados, etc.
+
+.................................................................................
+
+¿Dónde se usa?
+
+Generalmente va fuera o al  costado del contenido principal (<main> o <article>).
+Pero también puede ir dentro de un artículo, si la información complementa solo ese artículo.
+
+.................................................................................
+
+¿Para qué sirve?
+
+. Mostrar barras laterales (sidebar).
+. Poner publicidad.
+. Incluir notas adicionales, citas, referencias.
+. Mostrar enlaces relacionados (Por ejemplo: "Artículos recomendados").
+. Poner datos del autor o biografías cortas.
+
+.................................................................................
+
+¿Qué No es <aside>?
+
+. No es para contenido principal
+. No es obligatorio ponerlo siempre
+. No tiene un estilo visual propio, solo le da significado semántico (el diseño 
+  lo haces con CSS)
+
+.................................................................................
+
+¿Dónde lo colocamos?
+
+- Dentro de <article>: si complementa ese artículo en particular.
+- Fuera del <main>: Si es contenido adicional de toda la página (ejemplo: una 
+  barra lateral).
+
+---------------------------------------------------------------------------------
 

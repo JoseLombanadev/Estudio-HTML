@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>5 Ejercicios con "script"</h1>
+      <br />
+    </header>
+    <main>
+      <h2>Ejercicio Uno: Cambiar el texto de un elemento</h2>
+
+      <p id="demo">Lo inicialista</p>
+
+      <script>
+        document.getElementById("demo").innerHTML =
+          "Hola, soy Jose aprendiendo JavaScript";
+      </script>
+      <br />
+      <hr />
+      <h2>Ejercicio Dos: Cambiar texto al hacer clic</h2>
+
+      <button id="btn">Haz clic</button>
+      <p id="mensaje"></p>
+      <script>
+        document.getElementById("btn").onclick = function () {
+        document.getElementById("mensaje").innerHTML =
+          "¡Bien echo, clic detectado!";
+        }
+      </script>
+      <br />
+      <hr />
+      <h2>Ejercicio Tres: Cambiar el color de un texto</h2>
+
+      <h1 id="titulo">Texto rojo</h1>
+
+      <script>
+        document.getElementById("titulo").style.color = "red";
+      </script>
+      <br />
+      <hr />
+      <h2>Ejercicio Cuatro: Sumar dos números</h2>
+
+      <input type="number" id="num1" placeholder="Número 1" />
+      <input type="number" id="num2" placeholder="Número 2" />
+
+      <button onclick="sumar()">sumar</button>
+
+      <p id="resultado"></p>
+
+      <script>
+        function sumar() {
+          let numero1 = Number(document.getElementById("num1").value);
+          let numero2 = Number(document.getElementById("num2").value);
+
+          let suma = numero1 + numero2;
+
+          document.getElementById("resultado").innerHTML =
+            "La suma es: " + suma;
+        }
+      </script>
+      <br />
+      <hr />
+      <h2>Ejercicio Cinco: Mostrar la hora actual</h2>
+
+      <p id="hora"></p>
+
+      <script>
+        let fecha = new Date();
+
+        let horaActual = fecha.toLocaleTimeString();
+
+        document.getElementById("hora").innerHTML =
+          "Hora actual: " + horaActual;
+      </script>
+      <br />
+      <hr />
+    </main>
+    <footer>
+      <p>Hecho por: Jose Angel Lombana</p>
+    </footer>
+  </body>
+</html>
