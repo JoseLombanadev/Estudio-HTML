@@ -60,10 +60,22 @@ Horas echas de JAVA: H1
                                     H1 
                                     Minutos+10
 -----------------------------------------------
-                                07/30/2025
+                                 07/30/2025
                                     H1 
                                     H1 
-                                    H  
+                                    Minutos+30
+-----------------------------------------------
+                                 08/01/2025
+                                    H1  
+                                    H1 
+                                    H1 
+                                    H1 
+                                    Minutos+20
+-----------------------------------------------
+                                 08/02/2o25
+                                    H1 
+                                    H1 
+                                    Minutos+30         
 
 
 
@@ -1360,4 +1372,213 @@ Pero también puede ir dentro de un artículo, si la información complementa so
   barra lateral).
 
 ---------------------------------------------------------------------------------
+
+                                    "base"
+
+¿Qué es <base>?
+
+La etiqueta <base> en HTML sirve para definir una URL base y/o un destino por defecto para todos los enlaces (<a>) y recursos (como imágenes, scripts, etc.) que no tengan una URL completa.
+
+Importante: 
+   . Siempre va dentro de <head> (nunca en <body>).
+   . Solo puede haber una etiqueta <base> por documento (si pones más, el navegador solo toma la primera).
+
+.................................................................................
+
+¿Para qué sirve?
+
+. Definir la URL base:
+  Si escribes muchos enlaces relativos en una página, puedes poner una base común para que no tengas que repetir la URL completa en cada uno.
+
+. Definir el destino por defecto de los enlaces:
+  Con el atributo traget puedes hacer que todos los enlaces se abran, por ejemplo, en una nueva pestaña (_blank) o en el mismo marco (_self).
+
+  -------------------------------------------------------------------------------
+
+                                  "details"
+
+¿Qué es <details>?
+
+Es una etiqueta HTML interactiva que crea una sección que el usuario puede expandir  o contraer (abrir/cerrar).
+Por defecto, aparece como un "menú desplegable" que el usuario puede abrir haciendo clic.
+
+.................................................................................
+
+¿Cómo funciona?
+
+Dentro de <details>, puedes poner cualquier contenido (texto, imágenes, listas, párrafos, etc.).
+Para el título visible (el que aparece antes de deplegar), se usa la etiqueta <summary>.
+
+.................................................................................
+
+Atributos importantes.
+
+"open": Hace que el detalle esté abierto por defecto.
+
+<details open></details>
+---------------------------------------------------------------------------------
+
+                                      "summary"
+
+¿Qué es <summary>?
+
+. Es una etiqeuta HTML que define el título o encabezado visible de un bloque   
+  <details>.
+. Es el texto que aparece siempre visible y que el usuario puede hacer clic para 
+  desplegar o contraer el contenido.
+. Siempre debe ir dentro de <details> (si no, no funciona como debería).
+
+.................................................................................
+
+Ejemplo básico:
+
+<details>
+  <summary>Haz clic aquí para ver más</summary>
+  <p>Este es el contenido oculto que se muestra al hacer clic.</p>
+</details>
+
+.................................................................................
+
+¿Cómo funciona?
+
+. Por defecto, el <details> está cerrado (contenido oculto).
+. Cuando el usuario hace clic en <summary>, el bloque se despliega mostrando el 
+  contenido adicional.
+. Si quieres que aparezca abierto desde el inicio, añades el atributo "open" al 
+  <details>.
+
+.................................................................................
+
+Reglas importantes:
+
+- Debe haber solo un <summary> por cada <details>.
+  Si pones más de uno, es inválido.
+- El <summary> debe ser el primer hijo de <details>.
+  Si lo colocas después del contenido, no funciona correctamente.
+- Puedes poner texto, imágenes o incluso otros elementos dentro del <summary>.
+
+---------------------------------------------------------------------------------
+
+
+                                   "kbd"
+
+¿Qué es <kbd>?
+
+. <kbd> significa Keyboard (teclsdo).
+. Se usa para representar entradas del usuario, normalmente teclas que debe 
+  presionar o comandos que se escriben.
+. Sirve para indeicar, por ejemplo: "Presiona CTRL + S" o "Escribe npm indtall".
+
+.................................................................................
+
+Ejemplo básico:
+
+<p>Para guardar  el archivo, presiona <kbd>ctrl</kbd> + <kbd>S</kbd>.</p>
+
+.................................................................................
+
+¿Qué hace exactamente?
+
+- No ejecuta nada, solo marca el texto como una entrada del teclado.
+- Visualmente, el navegador apllica un estilo monoespaciado (tipo de letra como 
+  si fuera código).
+- El objetivo es semántico: ayuda a entender que es una acción del usuario (y mejora la accesibilidad).
+
+---------------------------------------------------------------------------------
+
+                                     "samp"
+
+¿Qué es <samp>?
+
+- Significado: Viene de sample output (salida de ejemplo).
+- Función: Se usa para representar texto que muestra la salida de un programa, 
+  sistema o comando.
+- Propósito: Indicar claramente al lector que el contenido no es texto normal, sino el resultado que devolvería un sistema (Por ejemplo:"Acceso denegado", "Error 404", etc).
+
+.................................................................................
+
+¿Cómo se ve?
+
+Por defecto, el texto dentro de <samp> se muestra en fuente monoespaciada (similar a <code> y <kbd>), porque así se diferencia de un texto común.
+
+Ejemplo:
+
+<p>El sistema devolvió: <samp>Acceso denegado</samp></p>
+
+.................................................................................
+
+¿Cuándo usarlo?
+
+. Para mostrar mensajes que el sistema muestra al usuario (errores, 
+  confirmaciones, salidas de programas).
+. En tutoriales donde muestras qué devuelve un comando.
+. Al documentar interfaces o ejemplos de resultados de código.
+
+.................................................................................
+
+Diferencia con otras etiquetas parecidas:
+
+- <code>: Es para escribir fragmentos de código (lo que tú escribes).
+- <kbd>: Es para lo que el usuario escribe o presiona (teclas/comandos).
+- <samp>: Es para lo que el sistema responde (salida o mensaje).
+
+.................................................................................
+
+Características clave:
+
+. Es semántica: Describe el significado del texto, no solo el estilo.
+. Accesible: Los lectores de pantalla entienden que es salida de un sistema.
+. No tiene atributos especiales: Solo se estiliza con CSS si quieres 
+  personalizarlo.
+
+---------------------------------------------------------------------------------
+
+                                      "pre"
+
+¿Qué es <pre>?
+
+. Nombre: viene de "preformatted" (preformateado).
+. Función: Sirve para mostrar texto exactamente como lo escribes en el código, 
+  respetando los saltos de línea, espacios y tabulaciones.
+. Visual: El navegador muestra el contenido con fuente monoespaciada (como en 
+  consola o editores de código).
+. Comportamiento:
+    . No colapsa los espacios múltiples  (como sí hace un párrafo normal).
+    . Todo lo que escribas dentro aparece tal cual en pantalla.
+
+.................................................................................
+
+Características importantes:
+
+- Mantiene el formato original
+- Usa fuente monoespaciada
+- Combinación frecuente
+- No es editable
+
+---------------------------------------------------------------------------------
+
+                                     "var"
+
+
+¿Qué es <var>?
+
+La etiqueta <var> en HTML se usa para representar una variable - Puede ser una variable matemática, un nombre de variable en programación o incluso un parámetro en un texto técnico.
+
+.................................................................................
+
+Diferencia con otras etiquetas 
+
+- <code>: representa fragmentos de código completo (ej. console.log() ).
+- <samp>: muestra ejemplos de salida (lo que devuelve el sistema).
+- <var>: específicamente para variables o parámetros.
+
+Ejemplo combinando:
+
+El valor de <var>X</var> en el código <code>console.log(<var>X</var>);</code> es mostrado como <samp>5</samp>.
+
+---------------------------------------------------------------------------------
+
+                                      ""
+
+
 
