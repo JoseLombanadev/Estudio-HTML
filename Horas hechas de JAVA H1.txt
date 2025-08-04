@@ -75,7 +75,13 @@ Horas echas de JAVA: H1
                                  08/02/2o25
                                     H1 
                                     H1 
-                                    Minutos+30         
+                                    Minutos+30
+-----------------------------------------------
+                                 08/03/2025
+                                    H1 
+                                    H1 
+                                    H1 
+                                    H               
 
 
 
@@ -1578,7 +1584,70 @@ El valor de <var>X</var> en el código <code>console.log(<var>X</var>);</code> e
 
 ---------------------------------------------------------------------------------
 
-                                      ""
+                                      "figure"
+
+. ¿Qué es?
+  Es un contenedor semántico para contenido realacionado con medios: imágenes, gráficos, tablas, fragmentos de código, etc.
+
+. ¿Para qué sirve?
+  Para agrupar contenido visual o independiente que puede ser referenciado o explicado con un pie de figura.
+
+. Dato clave: Un <figure> puede ir con o sin <figcaption>. Sirve para darle 
+  contexto a una imagen, gráfico o bloque visual.
+
+---------------------------------------------------------------------------------
+
+                                    "figcaption"
+
+. ¿Qué es?
+  Es el pie de figura (una descripción o título) que acompaña al contenido dentro de <figure>.
+
+. ¿Para qué sirve?
+  Para explicar lo que muestra la imagen, gráfico, diagrama o cualquier contenido
+  dentro de <figure>.
+
+. Dónde va: Siempre dentro de <figure>, y puede ir antes o después del contenido.
+
+---------------------------------------------------------------------------------
+
+                                       "time"
+
+¿Qué es <time>?
+
+La etiqueta <time> sirve para marcar fechas u horas en HTML.
+No solo muestra el texto, sino que también incluye un atributo especial (datetime) que guarda el valor de la fecha/hora en un formato que las máquinas (navegadores, buscadores, apps) pueden entender.
+
+Esto lo hace muy útil para:
+
+. Mostrar fechas legibles para humanos (por ejemplo: "3 de agosto de 2025")
+. Que las máquinas entiendan la fecha (por ejemplo: "2025-08-03"), mejorando el
+  SEO y accesibilidad.
+
+.................................................................................
+
+Estructura básica.
+
+<time datetime="AAAA-MM-DD">Texto visible</time>
+
+. datetime: Aquí se pone la fecha/hora en formato estándar (ISO 8601).
+. Texto visible: Es lo que el usuario ve (puede ser una fecha u hora en formato amigable).
+
+.................................................................................
+
+Formatos que acepta datetime:
+
+- Fechas completa: YYYY-MM-DD -> 2025-08-03
+- Hora: HH:MM -> 14:30
+- Fecha y hora: YYYY-MM-DDTHH:MM -> 2025-08-03T14:30
+- Solo mes y año: YYYY-MM -> 2025-08
+- Solo año: YYYY -> 2025
+- Duraciones: Con "P" para periodos -> P3D (3 días), P1Y2M(1 año y 2 meses).
+
+---------------------------------------------------------------------------------
+
+                                    ""
+
+
 
 
 
