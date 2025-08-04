@@ -81,7 +81,10 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1 
                                     H1 
-                                    H               
+------------------------------------------------
+                                 08/04/2025
+                                    H1 
+------------------------------------------------                
 
 
 
@@ -1645,9 +1648,62 @@ Formatos que acepta datetime:
 
 ---------------------------------------------------------------------------------
 
-                                    ""
+                               "Entidades HTML"
+
+Los caracteres reservados en HTML deben reemplazarse con entidades:
+
+. < (menor que) = <
+. > (mayor que) = >
+
+Entidades de caracteres HTML.
+
+Algunos caracteres están reservados en HTML.
+
+Si utiliza los signos menor que (<) o mayor que (>) en su texto HTML, el navegador podría mezclarlos con etiquetas.
+
+Los nombres de las entidades se ven así:
+
+&entity_name;
+
+Los números de entidad se ven así:
+
+&#entity_number;
+
+Para mostrar un signo menor que (<) debemos escribir: < o <
+
+---------------------------------------------------------------------------------
+
+                                    "form"
 
 
+¿Qué es <form>?
 
+. <form> es una etiqueta contenedora que sirve para agrupar campos e inputs 
+  (como textos, botones, selecciones, etc.) que el usuario puede llenar y enviar.
 
+. Es el puente entre el usuario y el servidor: los datos que el usuario ingresa en un formulario pueden ser enviados para procesarse (por ejemplo, en un registro, un login, una búsqueda...).
 
+"Es la estructura que usamos para crear formularios en la web."
+
+.................................................................................
+
+Estructura básica
+
+Un formulario suele tener esta forma:
+
+<form action="URL" method="método">
+  <!-- Aquí van los inputs, botones, etc. -->
+</form>
+
+.................................................................................
+
+Atributos principales:
+
+- action
+    . Define a dónde van los datos cuando el usuario envía el formulario.
+    . Ejemplo:
+        . action="procesar.Php" -> los datos se envían a un archivo PHP.
+        . action="https://api.ejemplo.com/guardar" -> los datos se envían a una 
+          API.
+    . Si se deja vacío (action=""), los datos se envían a la misma página.
+- method
