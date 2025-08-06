@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Memorizando "form"</title>
+    </head>
+    <body>
+        <header>
+            <h1>Ejercicios para almacenar "form"</h1>
+        </header>
+        <main>
+            <h2>Ejercicio Uno: Formulario de búsqueda (GET)</h2>
+
+            <form action="/buscar" method="get">
+                <label for="busqueda">Buscar:</label>
+                <input type="text" id="busqueda" name="q" />
+                <button type="submit">Buscar</button>
+            </form>
+<br />
+<hr />
+            <h2>Ejercicio Dos: Formulario de login (POST)</h2>
+
+            <form action="/login" method="post">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" />
+
+                <label for="clave">Contraseña:</label>
+                <input type="password" id="clave" name="clave" />
+
+                <button type="submit">Iniciar seción</button>
+            </form>
+<br />
+<hr />
+            <h2>Ejercicio Tres: Registro básico</h2>
+
+            <form action="/registro" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" />
+                
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" />
+
+                <button type="submit">Registrarse</button>
+            </form>
+<br />
+<hr />
+            <h2>Ejercicio Cuatro: Subida de archivos</h2>
+
+            <form action="/subir" method="post" enctype="multipart/form-data">
+                <label for="archivo">Subir imagen:</label>
+                <input type="file" id="archivo" name="archivo"/>
+                <button type="submit">Subir</button>
+            </form>
+<br />
+<hr />
+            <h2>Ejercicio Cinco: Encuesta rápida</h2>
+
+            <form action="/encuesta" method="post">
+                <p>¿Cuál es tu color favorito?</p>
+                <input type="radio" id="rojo" name="color" value="rojo" />
+                <label for="rojo">Rojo</label>
+
+                <input type="radio" id="azul" name="color" value="azul" />
+                <label for="azul">Azul</label>
+                
+                <input type="radio" id="verde" name="color" value="verde" />
+                <label for="verde">verde</label>
+
+                <p>¿Qué te gusta hacer?</p>
+                <input type="checkbox" id="leer" name="hobbies" value="leer" />
+                <label for="leer">Leer</label>
+
+                <input type="checkbox" id="deporte" name="hobbies" value="deporte" />
+
+                <button type="submit">Enviar</button>
+            </form>
+<br />
+<hr />
+
+            <h2>Ejercicios para memorizar al 1000%</h2>
+
+            <p>
+                Ejercicios Fáciles 
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+        <footer>
+            <p>
+                Hecho por: Jose Angel Lombana
+            </p>
+        </footer>
+    </body>
+</html>

@@ -84,7 +84,10 @@ Horas echas de JAVA: H1
 ------------------------------------------------
                                  08/04/2025
                                     H1 
-------------------------------------------------                
+------------------------------------------------       
+                                 08/05/2025
+                                    H1 
+------------------------------------------------            
 
 
 
@@ -1707,3 +1710,51 @@ Atributos principales:
           API.
     . Si se deja vacío (action=""), los datos se envían a la misma página.
 - method
+    . Define cómo se envían los datos.
+    . Valores principales:
+       . GET: Los datos se envían en la URL (por ejemplo: pagina.com? 
+         nombre=Jose&edad=20).
+           . Se usa para formularios de búsqueda o cuando la información no es 
+             sensible.
+       . POST: Los datos se envían de manera interna (no visibles en la URL).
+           . Se usa para formularios con información privada (registro, login, 
+             etc.).
+    . Por defecto, si  no lo pones, será GET.
+- Otros atributos útiles:
+    . enctype: Tipo de codificación (por ejemplo, multipart/form-data si vas a 
+      subir archivos).
+    . autocomplete: permite o desactiva autocompletado (on / off).
+    . target: Dónde se abrirá la respuesta (ej. _blank para nueva pestaña).
+
+.................................................................................
+
+Elementos que suelen ir dentro
+
+Dentro de <form> colocamos los elemnetos del formulario:
+
+  . Campos de texto: <input type="text">, <textarea>.
+  . Botones: <button>, <input type="submit">.
+  . Selecciones: <select>, <option>, <checkbox>, <radio>.
+  . Etiquetas: <label> para describir cada campo.
+
+.................................................................................
+
+Inputs básicos que casi siempre usas.
+
+- Texto: <input type="text">
+- Correo: <input type="email">
+- Contraseña: <input type="password">
+- Número: <input type="number">
+- Archivo: <input type="file">
+- Opciones únicas: <input type="radio">
+- Opciones múltiples: <input type="checkbox">
+
+Botones importantes:
+
+. <button type="submit"> -> envía el formulario.
+. <button type="reset"> -> borra lo que hayas escrito.
+
+
+---------------------------------------------------------------------------------
+
+
