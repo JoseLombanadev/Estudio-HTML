@@ -87,7 +87,10 @@ Horas echas de JAVA: H1
 ------------------------------------------------       
                                  08/05/2025
                                     H1 
-------------------------------------------------            
+------------------------------------------------  
+                                 08/06/2025
+                                    H1 
+------------------------------------------------           
 
 
 
@@ -1720,6 +1723,22 @@ Atributos principales:
            . Se usa para formularios con información privada (registro, login, 
              etc.).
     . Por defecto, si  no lo pones, será GET.
+
+¿Dónde se define?
+
+En el formulario, con el atributo method:
+
+<form action="procesar-php" method="GET">
+
+O 
+
+<form action="procesar.php" method="POST">
+
+¿Cómo saber cuál usar?
+
+. Si es solo para leer datos (ej. búsquedas) -> GET.
+. Si es para enviar o guardar información (ej. registro, login) -> POST.
+
 - Otros atributos útiles:
     . enctype: Tipo de codificación (por ejemplo, multipart/form-data si vas a 
       subir archivos).
@@ -1755,6 +1774,60 @@ Botones importantes:
 . <button type="reset"> -> borra lo que hayas escrito.
 
 
----------------------------------------------------------------------------------
+.................................................................................
+
+Etiquetas dentro de <form>:
+
+¿Qué es <label>?
+
+Es una etiqueta que sirve para describir un campo de formulario.
+En otras palabras, le pone un nombre o descripción a un input (Como una caja de texto, un checkbox, etc.) para que el usuario sepa qué debe escribir o seleccionar.
+
+Ejemplo en palabras:
+
+- Si tienes un input para el correo, el <label> sería algo como "Escribe tu 
+  correo:".
+
+.................................................................................
+
+¿Cómo funciona?
+
+La gracia de <label> es que se asocia con un <input>.
+Esto se hace con el atributo for, que debe coincidir con el id del input.
+ 
+¿Por qué es útil?
+
+ . Si haces clic en el texto del label, automáticamente el input asociado se 
+   activa. 
+
+ . Mejora la accesibilidad para  personas que usan lectores de pantalla.
+
+
+.................................................................................
+
+¿Qué es <input>?
+
+. Es una etiqueta de formulario que sirve para que el usuario ingrese o 
+  selecicione datos.
+
+. Es autocontenida (no tiene etiqueta de cierre).
+
+. Necesita atributos para saber de qué tipo es (texto, correo, contraseña, etc.).
+
+
+
+Ejemplo básico:
+
+<input type="text" name="usuario">
+
+
+Atributo clave: type
+
+El type define qué tipo de dato se ingresa.
+
+
+
+
+
 
 
