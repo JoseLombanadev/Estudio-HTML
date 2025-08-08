@@ -90,7 +90,11 @@ Horas echas de JAVA: H1
 ------------------------------------------------  
                                  08/06/2025
                                     H1 
-------------------------------------------------           
+------------------------------------------------
+                                 08/07/2025
+                                    H1 
+                                    Minutos+30 
+                                              
 
 
 
@@ -1824,9 +1828,157 @@ Ejemplo básico:
 Atributo clave: type
 
 El type define qué tipo de dato se ingresa.
+Estos son los más usados (te los divido por categorías):
+
+
+Uno: Entrada de texto:
+
+ - type="text" -> Texto normal.
+ - type="password" -> Texto oculto (contraseñas).
+ - type="email" -> Valida que sea un correo.
+ - type="url" -> Valida que sea una URL.
+ - type="number" -> Solo números.
+ - type="tel" -> Teléfonos.
+ - type="search" -> Cuadro de búsqueda.
+ - type="date" -> Seleccionar fecha.
+ - type="time" -> Seleccionar hora.
+ - type="datetime-local" -> Fecha y hora.
+ - type="month" -> Mes y año.
+ - type="week" -> Semana del año.
+
+Dos: Selección:
+
+ - type="radio" -> Botón de opción (solo uno se puede elegir dentro del mismo 
+   grupo)
+
+ - type="checkbox" -> Casillas de verificación (puedes elegir varias).
+
+ - type="color" -> Selector de color.
+
+ Tres: Subir archivos:
+
+ - type="file" -> para subir archivos.
+
+ Cuatro: Botones:
+
+ - type="submit" -> Botón para enviar el formulario.
+ - type="reset" -> Botón para borrar todo lo escrito.
+ - type="button" -> Botón sin función (puedes darle funciones con JavaScript).
+
+
+Atributos importantes de <input>
+
+Estos son los que más usarás:
+
+ - name -> Nombre del campo (clave con la que el servidor recibirá el valor).
+ - value -> Valor inicial del campo (o valor que se envía).
+ - placeholder -> Texto de ayuda que aparece dentro del campo.
+ - required -> Hace que el campo sea obligatorio.
+ - readonly -> Solo lectura (no se puede modificar).
+ - disabled -> Deshabilita el campo.
+ - min y max -> Valores mínimos y máximos (para number, date, etc.).
+ - maxlength -> Número máximo de caracteres.
+ - checked -> Para marcar por defecto un radio o checkbox.
+ - multiple -> permite seleccionar varios archivos o correos.
+ - step -> Define los intervalos (ejemplo: en un number saltar de 5 en 5).
+
+
+¿Cómo se envían los datos?
+
+Cuando el usuario escribe algo en el <input>, al presionar el botón "submit", 
+el navegador manda el valor del name y lo que el usuario escribió al archivo definido en el action del <form>.
+
+Ejemplo:
+
+  <input type="text" name="usuario" value="Jose">
+
+Si el usuario cambia "Jose" por "Pedro" y presiona enviar, el servidor recibirá:
+
+  usuraio=Pedro
+
+
+¿Cómo se ve en conjunto?
+
+Un formulario básico con <input>:
+
+    <form action="procesar.php" method="POST">
+      <input type="text" name="usuario" placeholder="Jose Angel">
+      <input type="password" name="clave"
+      placeholder="jOsEbErMeO10695324482057fkjfgd">
+    </form>
 
 
 
+"action"
+
+¿Qué es action en HTML?
+
+Es un atributo del <form> que le dice al navegador a dónde enviar los datos del formulario una vez que el usuario presione "submit".
+
+¿Qué significa "enviar los datos"?
+
+Cuando alguien llena un formulario (nombre, correo, etc.) y hace clic en "Enviar", el navegador manda esa información a una dirección web (URL). Esa dirección se escribe dentro del atributo action.
+
+
+Ejemplo básico
+
+  <form action="procesar.php" method="POST">
+    <input type="text" name="nombre" />
+    <input type="submit" value="Enviar" />
+  </form>
+
+- Cuando el usuario escriba su nombre y haga clic en "Enviar", el navegador mandará esa información al archivo procesar.php (en el mismo servidor).
+
+- La información se enviará como: nombre=Jose
+
+
+¿Qué puedo poner dentro de action?
+
+Puedes poner:
+
+Uno: Nombre de un archivo
+
+    <form action="guardar.php">
+
+Se enviará al archivo guardar.php (ubicado en la misma carpeta).
+
+Dos: Ruta con subcarpetas
+
+   <form action="formularios/respuesta.php">
+
+Se envía a respuesta.php dentro de la carpeta formularios.
+
+
+Tres: URL externa completa
+
+    <form action="https://ejemplo.com/recibir.php">
+
+Se envía a otro sitio web. Esto solo funciona si el sitio externo acepta recibir formularios, como APIs.
+
+
+Cuatro: Ruta relativa o absoluta
+
+- action="datos.php" -> Ruta relativa (misma carpeta).
+- action="/usuarios/datos.php" -> Ruta absoluta (desde raíz del sitio).
+
+
+¿Y qué pasa si uso mal el action?
+
+- Si escribes mal la ruta, el navegador intentará enviarlo pero fallará (Error 
+  404).
+- Si la página a la que se envía no está lista para recibir datos (por ejemplo, si no hay PHP o backend), los datos se pierden.
+
+
+¿Y cómo se relaciona con method?
+
+- action -> dice a dónde se envían los datos.
+- method -> dice cómo se envían (GET o POST).
+
+Ejemplo:
+
+    <form action="guardar.php" method="POST">
+
+-> Manda los datos a guardar.
 
 
 
