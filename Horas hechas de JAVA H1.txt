@@ -93,8 +93,15 @@ Horas echas de JAVA: H1
 ------------------------------------------------
                                  08/07/2025
                                     H1 
-                                    Minutos+30 
-                                              
+                                    Minutos+30
+------------------------------------------------
+????????????????????????????????????????????????
+------------------------------------------------
+                                 08/09/2025
+                                    H1  
+                                    H1 
+                                    H1    
+                                    H1           
 
 
 
@@ -1936,26 +1943,25 @@ Ejemplo básico
 
 Puedes poner:
 
+---------------------------------------------------------------------------------
 Uno: Nombre de un archivo
 
     <form action="guardar.php">
 
 Se enviará al archivo guardar.php (ubicado en la misma carpeta).
-
+---------------------------------------------------------------------------------
 Dos: Ruta con subcarpetas
 
    <form action="formularios/respuesta.php">
 
 Se envía a respuesta.php dentro de la carpeta formularios.
-
-
+---------------------------------------------------------------------------------
 Tres: URL externa completa
 
     <form action="https://ejemplo.com/recibir.php">
 
 Se envía a otro sitio web. Esto solo funciona si el sitio externo acepta recibir formularios, como APIs.
-
-
+---------------------------------------------------------------------------------
 Cuatro: Ruta relativa o absoluta
 
 - action="datos.php" -> Ruta relativa (misma carpeta).
@@ -1978,7 +1984,435 @@ Ejemplo:
 
     <form action="guardar.php" method="POST">
 
--> Manda los datos a guardar.
+-> Manda los datos a guardar.php usando el método POST.
+
+.................................................................................
+
+¿Qué es <label> en HTML?
+
+La etiqueta <label> se usa para etiquetar o nombrar un campo de un formulario, normalmente un <input>, <textarea> o <select>. Su función principal es indicar al usuario qué dato debe introducir.
+
+.................................................................................
+
+¿Para qué sirve?
+
+- Mejorar la accesibilidad: Ayuda a los lectores de pantalla a decirle al 
+  usuario qué debe escribir.
+- Mayor usabilidad: Si haces clic en el <label>, el cursor se mueve directamente 
+  al campo relacionado. Esto solo pasa si está correctamente asociado con el input.
+- Organiza visualmente los formularios: Deja claro qué corresponde a cada campo.
+
+.................................................................................
+
+¿Cómo se usa?
+
+Hay dos formas de asociar un <label> a un <input>:
+
+. Uno: Por atributo for (más común)
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email"/>
+
+- El atributo for="email" apunta al id="email" del input.
+- Si haces clic en el texto "Correo electrónico", el cursos se  mueve al input.
+---------------------------------------------------------------------------------
+. Dos: Encapsulando el input dentro del <label>
+
+    <label>Correo electrónico:
+     <input type="email" name="email" />
+    </label>
+
+- En este caso, no se necesita for ni id.
+- El clic también funcionará igual porque el campo está dentro del <label>.
+
+.................................................................................
+
+¿Qué atributos puede tener <label>?
+
+---------------------------------------------------------------------------------
+for                              Asocia el label con un input q que tenga ese id.
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Nota: <label> no tiene atributos de estilo por defecto, pero puedes usar class, style o id como en cualquier etiqueta HTML.
+---------------------------------------------------------------------------------
+
+Ejemplo completo:
+
+<form>
+  <label for="nombre">Nombre:</label"
+  <input type="text" id="nombre" name="nombre" />
+
+  <br><br>
+
+  <label for="edad">Edad:</label>
+  <input type="number" id="edad" name="edad" />
+</form>
+
+- Aquí, cada <label> está conectado con su campo correspondiente. 
+- Esto hace que sea claro y accesible.
+
+.................................................................................
+
+¿Qué pasa si no usas <label>?
+
+- El formulario puede ser confuso para el usuario.
+- Las personas con discapacidad visual no podrán usar lectores de pantalla  
+  correctamente.
+- La usabilidad del sitio se reduce.
+
+.................................................................................
+
+¿Qué es <textarea>?
+
+La etiqueta <textarea> sirve para crear un campo de texto de varias líneas dentro de un formulario. Es ideal para cosas como:
+
+      . Comentarios.
+      . opiniones o reseñas.
+      . Mensajes largos.
+      . Descripciones.
+
+A diferencia del <input type="text">, que es para una sola línea, <textarea> permite escribir texto más extenso, como un pequeño cuadro de notas.
+
+Sintaxis básica
+
+   <textarea name="mensaje" id="mensaje" rows="5" cols="30">
+   Escribe aquí tu mensaje...
+   </textarea>
+
+.................................................................................
+
+Explicación de los atributos más comunes:
+
+Atributo                              ¿Para qué sirve?
+---------------------------------------------------------------------------------
+name                                  Nombre del campo (clave que se envía al 
+                                      sevidor). Obligatorio si se envía el formulario.
+---------------------------------------------------------------------------------
+id                                    Identificador único para asociar con un 
+                                      <label>
+---------------------------------------------------------------------------------
+rows                                  Número de filas visibles (alto del cuadro).
+---------------------------------------------------------------------------------
+cols                                  Número de columnas visibles (ancho del 
+                                      cuadro).
+---------------------------------------------------------------------------------
+placeholder                           Texto gris que aparece como sugerencia 
+                                      dentro del área.
+---------------------------------------------------------------------------------
+maxlength                             Límite de caracteres que el usuario puede 
+                                      escribir.
+---------------------------------------------------------------------------------
+readonly                              Solo lectura (no permite escribir).
+---------------------------------------------------------------------------------
+disabled                              Desactiva el campo (gris y no editable).
+---------------------------------------------------------------------------------
+required                              Campo obligatorio para enviar el 
+                                      formulario.
+
+.................................................................................
+
+Ejemplo con <label>
+
+<form>
+  <label for="comentario">Comentario:</label><br>
+  <textarea name="comentario" id="comentario" rows="4" cols="40" placeholder="Escribe tu opinión aquí..." required></textarea>
+</form>
+
+.................................................................................
+
+Cosas útiles que puedes hacer con <textarea>:
+
+- Uno: Limitar caracteres
+
+  <textarea maxlength="200"></textarea>
+
+- Dos: Texto predeterminado dentro:
+
+  <textarea>Este texto ya está escrito.</textarea>
+
+- Tes: Evitar que se edite
+  
+  <textarea readonly>Solo lectura</textarea>
+
+- Cuatro: Desactivar el campo
+
+  <textarea disabled>Desactivado</textarea>
+
+
+.................................................................................
+
+Importante
+
+- El contenido de <textarea> va entre la etiqueta de apertura y cierre, no dentro de un atributo como en <input>.
+
+- El navegador puede permitir agrandar el área (con el mouse en la esquina), aunque puedes evitarlo con CSS si quieres.
+
+.................................................................................
+
+¿Qué es <select>?
+
+La etiqueta <select> se usa en formularios para crear un menú desplegable. Dentro de este menú, el usuario puede seleccionar una opción (o más, si lo configuras así).
+
+Se usa junto con la etiqueta <option> que define cada una de las opciones dentro del menú.
+
+Estructura básica:
+
+  <select name="pais" id="pais">
+    <option value="co">Colombia</option>
+    <option value="mx">México</option>
+    <option value="ar">Argentina</option>
+  </select>
+
+.................................................................................
+                        ----------------------------
+                       + Explicación de cada parte: +
+                        ----------------------------
+
+Etiqueta o atributo                                  ¿Para qué sirve?
+---------------------------------------------------------------------------------
+<select>                                              Crea el menú desplegable.
+---------------------------------------------------------------------------------
+name                                                  Nombre que se enviará al 
+                                                      servidor. Es la clave del dato.
+---------------------------------------------------------------------------------
+id                                                    Identificador para asociar 
+                                                      con <label>.
+---------------------------------------------------------------------------------
+<option>                                              Cada opción visible que el 
+                                                      Usuario puede elegir.
+---------------------------------------------------------------------------------
+value                                                 valor interno que se envía 
+                                                      si  el usuario elige esa opción.
+---------------------------------------------------------------------------------
+selected                                              Marca una opción como 
+                                                      seleccionada por defecto.
+---------------------------------------------------------------------------------
+disabled (en <option>)                                Desactiva esa opción  
+                                                      especifica.
+---------------------------------------------------------------------------------
+disabled (en <select>)                                Desactiva todo el menú.
+---------------------------------------------------------------------------------
+required                                              hace que el usuario tenga 
+                                                      que seleccionar algo.
+---------------------------------------------------------------------------------
+multiple                                              permite seleccionar varias 
+                                                      opciones a la vez (usa Ctrl o Shift).
+
+.................................................................................
+
+Ejemplo completo:
+
+<form>
+  <label for="fruta">Elige tu fruta favorita:</label>
+  <select name="fruta" id="fruta" required>
+   <option value="">_Selecciona una opción_</option>
+   <option value="manzana">Manzana</option>
+   <option value="banano">Banano</option>
+   <option value="pera">Pera</option>
+   <option value="uva" selected>Uva</option>
+  </select>
+<form>
+
+Detalles adiciones:
+
+-SELECTED-
+
+Selecciona una opción por defecto:
+
+  <option value="uva" selected>Uva</option>
+
+Opción desactivada:
+
+  <option value="naranja" disabled>Naranja (no disponible)</option>
+
+.................................................................................
+
+Seleccón múltiple:
+
+   <select name="lenguajes" id="lenguajes" multiple>
+     <option value="html">HTML</option>
+     <option value="css">CSS</option>
+     <option value="js">JavaScript</option>
+   </select>
+
+.................................................................................
+
+---------------------------------------------------------------------------------
+Importante: Si usas multiple, el atributo name debe terminar en [] para enviar varios valore:
+   .....................................
+  { <select name="lenguajes[]" multiple> }
+   .....................................
+
+---------------------------------------------------------------------------------
+
+
+.................................................................................
+
+Diferencia entre <select> y <input type="text">:
+
+Característica                    <input type="text">                  <select>
+
+Escribes libremente                      [I]                  Solo eliges [X]
+
+Menú desplegable                         [X]                              [I]
+
+Opciones fijas                           [X]                              [I]
+
+Se usa para respuestas cortas            [I]                              [I]
+
+.................................................................................
+
+¿Qué es target?
+
+target es un atributo HTML que se usa principalmente en enlaces (<a>) y formularios (<form>), y define dónde se va a abrir la página o el recurso al que se está accediendo.
+
+¿Dónde se usa?
+
+Principalmente en:
+
+ - <a> -> para enlaces.
+ - <form> -> Para definir dónde se mostrará la respuesta al enviar el formulario.
+ - <base> -> Para establecer un target por defecto para todos los enlaces del  
+             documento.
+
+Valores más comunes de target:
+
+valor                                            ¿Qué hace?
+---------------------------------------------------------------------------------
+_self                         (Por defecto) Abre el enlace en la misma pestaña/
+                               ventana.
+---------------------------------------------------------------------------------
+_blank                         Abre el enlace en una nueva pestaña o 
+                               ventana.
+---------------------------------------------------------------------------------
+_parent                        Abre el enlace en el marco padre (cuando se usan  
+                               <iframe> o <frameset>).
+---------------------------------------------------------------------------------
+_top                           Abre el enlace en la ventana completa, saliendo 
+                               de cualquier <frame> o <iframe>.
+---------------------------------------------------------------------------------
+nombre                         Abre el enlace en un marco (frame) o ventana con 
+                               ese nombre (útil con <iframe> o pop-ups).
+
+.................................................................................
+
+Ejemplos prácticos:
+
+*********************************************************************************
+Uno: target="_blank" -> nueva pestaña
+
+     <a href="https://www.google.com" target="_black>Abrir Google en otra pestaña</a>
+*********************************************************************************
+Dos: target="_self" -> misma pestaña (valor por defecto)
+
+   <a href="contacto.html" target="_self">Ir a Contacto</a>
+*********************************************************************************
+Tres: target="_top" -> rompe iframes
+
+Si estás dentro de un <iframe>, este valor hace que el enlace se abra en toda la ventana, saliendo del marco.
+
+   <a href="inicio.html" target=_top">Salir del iframe</a>
+*********************************************************************************
+Cuatro: target="miMarco" -> abrir en un <iframe>
+
+Supón que tienes un iframe con nombre "miMarco":
+
+    <iframe name="miMarco" width="500" heigth="300"></iframe>
+    <a href="info.html" target="miMarco">Mostrar en el iframe</a>
+
+Cuando haces clic, info.html se carga dentro del iframe, no en toda la página.
+*********************************************************************************
+Cinco: En formularios:
+
+      <form action="procesar.html" method="post" target="_black">
+        <input type="text" name="nombre" />
+        <button type="submit">Enviar</button>
+      </form>
+*********************************************************************************
+
+Precaución de seguridad con _blank
+
+Cuando usas target="_blank", es recomendable proteger tu página con esto:
+
+     <a href="https://otro-sitio.com" target="_blank" rel="noopener noreferrer">Enlace seguro</a>
+
+Esto evita que el otro sitio tenga acceso a tu página medianto window.opener (previene ataques como tabnabbing). 
+
+
+.................................................................................
+
+¿Qué es autocomplete?
+
+"autocomplete" es un atributo global que se usa principalmente en formularios (<form>) y campos de entrada (<input>, <textarea>, <select>), y le dice al navegador si debe o no sugerir valores automáticamente, como nombre, correos, contraseñas, direcciones, etc.
+
+¿Para qué sirve?
+
+Sirve para ayudar al usuario a completar más rápido un formulario reutilizando datos que ya ha introducido antes. Ejemplo típico: cuando escribes tu nombre o correo y el navegador ya lo completa por ti.
+
+Dónde se puede usar:
+
+- En <form> -> para activar/desactivar el autocompletado de todo el formulario.
+
+- En <input>, <textarea> y <select> -> para  controlar el autocompletado campo 
+  por campo.
+
+
+Valores posibles de autocomplete
+
+Valor                                               Significado
+ 
+"on"                                          Activa el autocompletado.       
+
+"off"                                        Desactiva el autocompletado.
+
+Otros valores especiales              Como name, email, password, street-address
+
+.................................................................................
+
+
+Ejemplos prácticos
+
+
+Uno: Activar autocompletado (por defecto)
+
+   <form action="guardar.php" autocomplete="on">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" />
+   </form>
+
+Si el usuario ya ha escrito antes su nombre, el navegador lo sugerirá.
+---------------------------------------------------------------------------------
+Dos: Desactivar autocompletado
+
+      <form action="guardar.php" autocomplete="off">
+       <label for="correo">Correo electrónico:</label>
+       <input type="email" name="correo" id="correo" />
+      </form>
+
+El navegador no sugerirá nada automáticamente. Útil para datos confidenciales (como contraseñas o tarjetas).
+---------------------------------------------------------------------------------
+
+Tres: Autocompletado específico por campo
+
+Puedes usar autocomplete en campos individuales con  valores específicos:
+
+  <form action="procesar.php">
+   <label for="email">Email:</label>
+   <input type="email" name=
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
