@@ -102,9 +102,25 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1    
                                     H1           
+------------------------------------------------
+                                 08/10/2025
+                                    H1 
+                                    H1 
+                                    H1 
+------------------------------------------------      
+ 
 
+---------------------------------------------------------------------------------
+Etiquetas faltantes: ...--<fieldset>--...
+                     <legend>
+                     <optgroup>
+                     <option>
+                     <button>
+                     <datalist>
+                     <output>
+                     
 
-
+---------------------------------------------------------------------------------
 .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 
 Logros: ¡Me aprendi al detalle la estructura basica de HTML!.
@@ -2399,20 +2415,356 @@ Puedes usar autocomplete en campos individuales con  valores específicos:
 
   <form action="procesar.php">
    <label for="email">Email:</label>
-   <input type="email" name=
+   <input type="email" name="email" id="email" autocomplete="email" />
+
+   <label for="clave">Contraseña:</label>
+   <input type="password" name="clave" id="clave" autocomplete="current-password" />
+  </form>
+
+Esto ayuda al navegador a entender qué tipo de información se está solicitando.
+.................................................................................
+                       Lista de valores específicos comunes
+
+Valor                                                Campo esperado 
+
+name                                                nombre completo
+
+email                                               Correo electronico
+
+username                                            Nombre de usuario
+
+new-password                                        Nueva contraseña
+
+current-password                                    Contraseña actual
+
+tel                                                 Número de teléfono
+
+street-address                                      Dirección
+
+postal-code                                         código postal
+
+country-name                                        País
+
+cc-number                                           Número de tarjeta de crédito
 
 
+Y muchos más. Se usa especialmente en formularios más complejos (como compras, registros, etc.).
+.................................................................................
 
 
+Buenas prácticas 
+
+- Usa autocomplete="off" en campos sensibles (contraseñas, pagos, tokens).
+- Usa autocomplete="on" para campos comunes que el usuario rellena muchas vaces, 
+  como nombre, correo, dirección.
+- Cuando creas formularios para usuarios registrados, el autocompletado puede 
+  mejorar la experiencia de usuario.
+
+.................................................................................  
+¿Qué es novalidate?
+
+novalidate es un atributo booleano que se aplica al elemento <form> en HTML.
+
+Su función es desactivar la validación automática del navagador cuando se envía un formulario.
+
+*********************************************************************************
+
+¿Para qué sirve?
+
+Por defecto, HTML5 valida ciertos campos automáticamente al presionar el botón "Enviar". Por ejemplo:
+
+    - Verifica si un campo "email" contiene un correo válido.
+    - Verifica si un campo "required" fue completado.
+    - Verifica si un campo "number" contiene un número.
+
+Pero si usas el atributo "novalidate", el navegador no realizará ninguna validación, incluso si los campos tienen restricciones (required, type, pattern, etc.). 
+
+*********************************************************************************
+
+¿Cómo se usa?
+
+En el formulario
+
+  <form action="procesar.php" novalidate>
+   <label for="correo">Correo electrónico:</label>
+   <input type="email" id="correo" name="correo" required/>
+
+   <button type="submit">Enviar</button>
+  </form>
+
+En este caso, aunque el campo de correo es de tipo email y tiene required, el navegador permitirá el envío aunque esté vacío o mal escrito.
+
+*********************************************************************************
+
+¿Cuándo usar novalidate?
+
++- Cuando vas a validar el formulario con JavaScript personalizado y no quieres 
++  que el navegador interbenga.
++
++- Cuando estás haciendo pruebas.
++
++- En formularios que no requieren validación estricta.
+
+*********************************************************************************
+
+¿Cuándo NO usarlo?
+
+ - Si quieres aprovechar la validación automática del navegador.
+ - Si tu formulario es simple y no necesitas validación avanzada.
+
+ ********************************************************************************
+
+Detalles importantes
+
+ - Solo se usa en <form>, no en los campos individuales.
+ - No tiene valor: se escribe solo novalidate, no novalidate="true" ni  
+   novalidate="false".
+ - Si lo agregas, el navegador ignora todas las restricciones HTML5 de los 
+   campos.
+
+.................................................................................
+
+¿Qué es accept-charset?
+
+accept-charset es un atributo del elemento <form>  que defíne qué codificaciones de caracteres acepta el servidor cuando se envía el formulario.
+
+dicho de forma sencilla:
+
+  Indica cómo deben codificarse los caracteres (como letras con tildes, ñ, símbolos especiales, etc.) al enviar el formulario al servidor.
+
+¿Qué es una codificación de caracteres?
+
+Una codificación de caracteres (charset) es la forma en que el navegador traduce letras, números y símbolos en bytes para poder enviarlos o guardarlos.
+
+Por ejemplo:
+
+ - UTF-8 es la codificación más común hoy en día.
+ - ISO-8859-1 era muy usada en Europa occidental antes.
+ - Otras incluyen: UTF-16,  windows-1252, etc.
+
+.................................................................................
+
+¿Para qué sirve accept-charset?
+
+Sirve para asegurar que los datos enviados en el formulario (especialmente texto) se entiendan correctamente cuando llegan al servidor.
+
+Esto es muy importante si:
+
+ - Tus usuarios escriben en idiomas con acentos (como el español).
+ - Tienes caracteres especiales: emojis, ñ,  ü, ç, etc.
+ - El servidor requiere una codificación específica.
+
+.................................................................................
+
+Sintaxis
+
+ <form accept-charset="UFT-8" action="procesar.php" method="post">
+
+También puedes especificar más de una codificación separada por espacios:
+
+ <form accept-charset="UTF-8 ISO-8859-1">
+
+En ese caso, el navegador intentará usar la primera y, si no puede, intentará las siguientes.
+
+Ejemplo práctico
+
+  <form action="procesar.php" method="post" accept-charset="UTF-8">
+    <label for="mensaje">Mensaje:</label>
+    <textarea name="mensaje" id="mensaje" rows="4" cols="30"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+Si el usuario escribe:
+
+"!Hola, José! ¿Cómo estás? 😊"
+El navegador usará la codificación UTF-8 para que las tildes y el emoji se envíen correctamente al servidor.
+
+.................................................................................
 
 
+⚠️ Si no usas accept-charset...
+
+El navegador usará por defecto la misma codificación que tiene la página HTML, usualmente:
+
+  <meta charset="UTF-8" />
+
+Por eso, si tu HTML ya tiene UTF-8, muschas veces no necesitas poner accept-charset.
+
+.................................................................................
+
+Cuándo usarlo
+
+- Cuando quieres asegurarte de que los datos se envíen en una codificación 
+  concreta (por compatibilidad con un servidor viejo, por ejemplo).
+- Cuando estás trabajando con formularios internacionales o de varios idiomas.
+- Cuando sabes que el servidor no puede interpretar bien ciertos caracteres si 
+  no se usan ciertos charsets.
+
+.................................................................................
+
+X Cuándo NO usarlo
+
+- Si ya estás usando <meta charset="UTF-8"> y el servidor está preparado para 
+  UTF-8, muchas veces no hace falta.
+-Si no sabes qué charset usa el servidor, es mejor consultar antes de forzarlo.
+
+.................................................................................
+
+🔐 Relación con seguridad
+
+Usar una codificación incorrecta puede hacer que los datos lleguen mal, se interpreten mal o, en casos extremos, causar problemas de seguridad (inyección de caracteres).
+
+Por eso, lo mejor es usar UTF-8, que es seguro, estándar y ampliamente soportado.
+
+.................................................................................
 
 
+Comparación rápida 
+
+Codificación              Caracteres soportados          Uso común
+
+UTF-8                     Todos (universal)              Web moderna, emojis, 
+                                                         multilenguaje
+
+ISO-8859-1                Europa occidental              Sitios antiguos en 
+                                                         español
+
+UTF-16                    Todos, pero más pesado         Algunos documentos y  
+                                                         programas
 
 
+.................................................................................
+
+Buenas prácticas
+
+ - Siempre usa UTF-8, a menos que tengas una razón técnica muy específica.
+ - Asegúrate de que tu servidor interprete la codificación correctamente.
+ - Si haces páginas en español, UTF-8 evitará errores con acentos o la ñ.
 
 
+.................................................................................
 
+¿Qué es rel?
+
+El atributo rel significa "relación" (rel viene de relationship) y define la relación entre el documento actual y el recurso al que se enlaza.
+
+Se usa principalmente para decir:
+
+  "¿Qué tipo de relación tiene este enlace orecurso con  la página actual?"
+
+.................................................................................
+
+¿Dónde se usa rel?
+
+Principalmente en dos etiquetas HTML:
+
+- <a> - Enlaces normales.
+- <link> - Enlaces dentro del <header> para archivos externos.
+
+.................................................................................
+
+Uso de rel en <a>
+
+
+<a href="https://ejemplo.com" rel="nofollow">Ir al sitio</a>
+
+Con <a>, rel describe la relación con la URL que estamos enlazando. Es útil para buscadores, seguridad y control del comportamiento del enlace.
+
+ 
+Valores comunes en <a>:
+
+valor "rel"            ¿Qué significa?                      ¿Para qué sirve?
+
+nofollow            No segur el enlace (SEO)             Google no sigue el link 
+                                                         ni lo indexa
+
+noopener            No permite acceso al objeto          Mejora seguridad al 
+                    window.opener                        abrir en nueva pestaña
+
+noreferrer          No envía información de referencia   Protege privacidad
+
+external            Es un enlace externo                 Solo informativo, sin 
+                                                         efecto real
+
+ugc                 Contenido generado por el usuario    Comentarios, foros. 
+                                                          Útil en SEO
+ 
+sponsored           Enlace pagado o patrocinado          Google lo usa para 
+                                                         identificar publicidad
+
+
+Importante: Para seguridad, cuando uses target="_blank", también deberías usar rel="noopener noreferrer" par evitar ataques.
+
+.................................................................................
+
+
+Uso de rel en <link>
+
+  <link rel="skylesheet" href="estilos.css">
+
+Con <link>, rel define el tipo de recurso que estás vinculando (como una hoja de estilo, íconos, etc.)
+
+Valores comunes en <link>:
+
+
+Valor rel           ¿Qué significa?                        ¿Para qué sirve?
+ 
+stylesheet          Hoja de estilos                      Para vincular archivos 
+                                                         CSS.
+
+icon                ícono del sitio                      Favicon del navegador.
+
+manifest            Web App manifest                     Aplicaciones web 
+                                                         progresivas.
+
+alternate           Alternativa del documento            Para RSS, versiones en 
+                                                         otro idioma, etc.
+
+preload             Precargar recursos                   Mejora el rendimiento.
+
+canonical           Página conónica                      SEO: evita contenido 
+                                                         duplicado.
+
+.................................................................................
+
+
+Buenas prácticas
+
+
+- Usa rel="noopener noreferrer" con target="_blank" para seguridad.
+- Usa rel="nofollow" si no quieres pasar autoridad SEO a un enlace externo.
+- Usa rel="stylesheet" correctamente en tu <link> de CSS.
+- Sé claro en la intención del enlace; esto mejora accesibilidad y SEO.+
+
+.................................................................................
+
+
+                                <fieldset>
+
+¿Qué es <fielset>?
+
+Es una etiqueta de formulario en HTML que sirve pera agrupar visualmente y de manera estructurada varios controles de formulario (como <input>, <label>, <select>, etc.).
+
+  El navegador dibuja un recuadro alrededor del grupo, y este grupo puede tener un título si usas junto a él la etiqueta <legend> (que se explica luego).
+
+¿Para qué sirve <fieldset>?
+
+ - Agrupa campos relacionados entre sí.
+ - Mejora la accesibilidad y la organización visual de los formularios.
+ - Es ideal para formularios largos que se dividen por secciones (por ejemplo, "Datos personales", "Dirección", "preferencias").
+
+ Estructura básica
+
+   <fieldset>
+    <legend>Información personal</legend>
+    
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" />
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" />
+  </fieldset>
 
 
 
