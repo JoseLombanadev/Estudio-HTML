@@ -92,19 +92,122 @@
                 <button type="submit">Enviar</button>
 
             </form>
+<hr>
+<br>
+
+            <h2>Ejercicio Uno.</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" name="nombre" id="nombre"/>
+                    
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad"/>
+                </fieldset>
+            </form>
+<br>
+<hr>
+            <h2>Ejercicio Dos: Agrupar datos de contacto</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+
+                    <label for="correo">Correo:</label>
+                    <input type="email" name="correo" id="correo"/>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono" id="telefono"/>
+                </fieldset>
+            </form>
+<br>
+<hr>    
+
+            <h2>Ejercicio Tres: Dos fieldsets en un mismo formulario</h2>
 
 
+            <!--
+            👉🏻 Objetivo:
+            Crear un formulario con dos secciones separadas usando <fieldset> y <legend> en cada una.
+            -->
+
+            <form>
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" name="nombre" id="nombre"/>
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" name="edad" id="edad"/>
+
+                </fieldset>
+
+                 <fieldset>
+                        <legend>Datos de contacto</legend>
+
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" name="correo" id="correo"/>
+
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" name="telefono" id="telefono"/>
+
+                    </fieldset>
+            </form>
+<br>
+<hr>
+
+                <h2>Ejercicio: Agrupar opciones en una lista desplegable</h2>
+           <!-- 
+             👉🏻 Objetivo:
+             Crear una lista desplegable <select> donde las opciones estén organizadas en grupos utilizando <optgroup>.
+           -->
 
 
+           <form>
+            <label for="pais">Elige tu continente y país:</label>
+            <select name="pais" id="pais">
+                <optgroup label="América">
+                    <option>Colombia</option>
+                    <option>México</option>
+                    <option>Argentina</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option>España</option>
+                    <option>Francia</option>
+                    <option>Alemania</option>
+                </optgroup>
+            </select>
+           </form>
+<br>
+<hr>
 
+            <h2>Ejercicio: usar "optgroup disabled"</h2>
 
+            <!--
+            👉🏻 Objetivo:
+            Crear un formulario con un <select> que contenga un grupo de opciones activas y otro grupo de opciones desactivadas usando el atributo disabled en <optgroup>
+            -->
 
+                <form>
+                    <label for="ciudad">Selecciona tu ciudad:</label>
 
-
-
-
-
-
+                    <select name="ciudad" id="ciudad">
+                        <optgroup label="Colombia">
+                            <option>Bogotá</option>
+                            <option>Medellín</option>
+                            <option>Cali</option>
+                        </optgroup>
+                        <optgroup label="Otros países" disabled>
+                            <option>Nueva York</option>
+                            <option>Madrid</option>
+                            <option>París</option>
+                        </optgroup>
+                    </select>
+                </form>
 
 
 

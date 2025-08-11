@@ -107,15 +107,19 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1 
                                     H1 
-------------------------------------------------      
- 
+------------------------------------------------
+                                 08/11/2025
+                                    H1 
+                                    H1 
+                                    H1        
+ -----------------------------------------------
 
 ---------------------------------------------------------------------------------
 Etiquetas faltantes: ...--<fieldset>--...
-                     <legend>
-                     <optgroup>
-                     <option>
-                     <button>
+                      ...--<legend>--...
+                     ...--<optgroup>--...
+                     ...---<option>--...
+                      ...--<button>--...
                      <datalist>
                      <output>
                      
@@ -2766,6 +2770,246 @@ Es una etiqueta de formulario en HTML que sirve pera agrupar visualmente y de ma
     <input type="email" id="correo" name="correo" />
   </fieldset>
 
+Detalles importantes 
+
+ - Puedes tener varios <fieldset> dentro de un solo <form>.
+ - Ayuda a que el usuario entienda que ciertos campos están relacionados entre 
+   sí.
+ - Se puede usar con CSS para personalizar su estilo.
+
+ ¿Qué puede ir dentro de <fieldset>?
+
+ Dentro de un <fieldset> pueden ir todo estos elementos:
+
+ Uno: <legend>
+
+   Describe el contenido del fieldset. siempre debe ir como el primer hijo del <fieldset>
+
+ Dos: <label>
+
+  Se usa para etiquetar los controles como <input>, <textarea>, <select>, etc.
+  
+
+ Tres: <input>
+   Cualquier tipo: texto, radio , checkbox, email, etc.
+
+
+ Cuatro: <select> y <option>, <optgroup>
+   Para listas desplegables.
+
+ Cinco: <textarea>
+   Para escribir texto largo.
+
+ Seis: <button>
+   Botones  de enviar, resetear o personalizados.
+
+ Siete: <datalist>
+   Para opciones sugeridas en un <input>.
+
+ Ocho: <output>
+   Para mostrar resultados calculados O generados por el formulario.
+
+ Nueve: <fieldset> anidados
+   Puedes tener fieldsets dentro de otros fieldsets para organizar aún mejor.
+
+ Dies: Otros elementos HTML
+   Como <p>, <div>, <span>, etc., si quieres mejorar el estilo o la estructura del formulario.
+
+
+Ejemplo general: 
+
+    <fieldset>
+      <legend>Información personal</legend>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="email">Correo:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="pais">País:</label>
+      <select id="pais" name="pais">
+          <option value="co">Colombia</option>
+          <option value="mx">México</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </fieldset>
+
+
+.................................................................................
+
+                               <legend>
+
+¿Qué es la etiqueta <legend>?
+
+La etiqueta <legend> sirve para poner un título o descripción  al grupo de campos que se encuentra dentro de un <fieldset>.
+
+     Es decir: Si <fieldset> agrupa, <legend> le pone nombre a ese grupo.
+
+Características clave de <legend>
+
+característica               Detalle
+
+ Se usa con                   <fieldset>
+
+ Posición                      Siempre debe ir como primer hijo de <fieldset>
+
+ Función                       Describe el propósito del grupo de campos
+
+ Accesibilidad                 Mejora la comprensión del formulario para 
+                               usuarios con lectores de pantalla
+
+ 
+Estructura básica
+
+
+<fieldset>
+   <legend>Datos del usuario</legend>
+   <!-- Aquí van los inputs, labels, etc. -->
+</fieldset>
+
+
+¿Por qué es importante?
+
+Uno: 
+      Organización visual: El navegador normalmente muestra <legend> como un  
+                           texto en la parte superior del borde del <fieldset>.
+
+Dos: 
+      Accesibilidad: Ayuda a que los lectores de pantalla entiendan mejor la 
+                     estructura del formulario.
+
+Tres:
+       Claridad para el usuario: Hace que el formulario sea más claro, 
+                                 especialmente cuando tiene muchos campos.
+
+
+Buenas prácticas 
+
+- Úsalo siempre que uses <fieldset>
+
+- Haz que el texto sea breve y descriptivo
+  Ej: "información de contacto", "preferencias", "Método de pago"
+
+- Mantén solo una etiqueta <legend> por cada <fieldset>
+
+
+.................................................................................
+
+                               <optgroup>
+                               
+
+¿Qué es <optgroup>?
+
+La etiqueta <optgroup> se usa dentro de un <select> para agrupar opciones relacionadas . Sirve para organizar las opciones en categorías, haciendo que el menú sea más claro para el usuario.
+
+¿Dónde se usa?
+
+Se usa dentro de <select> y contiene múltiples etiquetas <option>.
+No se puede usar fuera de <select>, ni puede contener otras cosas que no sean <option>.
+
+
+🔎-¿Cómo funciona?-🔍
+
+Estructura general:
+
+
+  <select>
+   <optgroup label="Grupo 1">
+    <option>Opción A</option>
+    <option>Opción B</option>
+   </optgroup>
+  
+
+   <optgroup label="Grupo 2">
+    <option>Opción A</option>
+    <option>Opción B</option>
+   </optgroup>
+  </select>
+
+
+Resultado visual:
+
+   Grupo 1 
+      - Opción A 
+      - Opción B 
+   Grupo 2
+      - Opción C 
+      - opción D
+
+
+Atributos de <optgroup>
+
+Atributo                                      Descripción
+
+label                        Nombre del grupo que se mostrará como encavazado
+
+disabled                     Si se añade, el grupo y sus opciones  estarán 
+                             desactivadas 
+
+
+Ejemplo con disabled:
+
+  <optgroup label="No disponible" disabled>
+    <option>Opción x</option>
+    <option>opción y</option>
+  </optgroup>
+
+.................................................................................
+ 
+                                   <button>
+
+¿Qué es la etiqueta <button>?
+
+La etiqueta <button> se usa para crear botones interactivos en una página web. Estos botones pueden servir para:
+
+     - Enviar un formulario 
+     - Reiniciar (resetear) un formulario 
+     - Ejecutar acciones personalizadas con JavaScript 
+     - Botones que no hacen nada derectamente  (pero que pueden usarse para 
+       diseño)
+
+
+Sintaxis básica:
+
+<button> Texto del botón</button>
+
+
+Tipos de botón
+
+La etiqueta <button> tiene un atributo importante: type
+
+atributo type                              ¿Qué hace?
+
+submit                                     Envia el formulario.Es el valor por 
+                                           defecto. 
+
+reset                                      Reinicia todos los campos del 
+                                           formulario
+
+button                                     No hace nada por sí solo (se usa con 
+                                           JavaScript o diseño)
+
+
+
+Ejemplos:
+ 
+  <!-- Enviar el formulario -->
+  <button type="submit">Enviar</button>
+
+  <!-- Reiniciar el formulario -->
+  <button type="reset">Limpiar</button>
+
+  <!-- Botón sin acción (por ahora) -->
+  <button type="button">Haz clic</button>
+
+
+Ventajas de <button> sobre <input type="submit">
+
+ - Puedes colocar texto, iconos, etiquetas HTML (como <strong>, <img>, etc.) 
+   dentro de <button>.
+ - Tienes más control visual y semántico.
 
 
 
