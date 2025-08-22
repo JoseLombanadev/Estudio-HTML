@@ -113,6 +113,11 @@ Horas echas de JAVA: H1
                                     H1 
                                     H1        
  -----------------------------------------------
+                                 08/21/2025
+                                    H1
+                                    H1 
+------------------------------------------------     
+
 
 ---------------------------------------------------------------------------------
 Etiquetas faltantes: ...--<fieldset>--...
@@ -120,8 +125,8 @@ Etiquetas faltantes: ...--<fieldset>--...
                      ...--<optgroup>--...
                      ...---<option>--...
                       ...--<button>--...
-                     <datalist>
-                     <output>
+                     ...--<datalist>--...
+                      ...--<output>--...
                      
 
 ---------------------------------------------------------------------------------
@@ -3010,6 +3015,99 @@ Ventajas de <button> sobre <input type="submit">
  - Puedes colocar texto, iconos, etiquetas HTML (como <strong>, <img>, etc.) 
    dentro de <button>.
  - Tienes más control visual y semántico.
+
+.................................................................................
+
+
+                                            <datalist>
+
+
+
+  ¿Qué es <datalist>?
+
+  <datalist> es una etiqueta en HTML que se usa para proporcionar una lista de opciones predefinidas a un campo de entrada <input>. Es muy útil cuando quieres que el usuario pueda escribir libremente, pero también ofrecerle sugerencias automáticas mientras escribe.
+
+
+¿Cómo funciona?
+
+ - Se utiliza junto con un <input>.
+ - El <input> debe tener un atributo list que apunte al id del <datalist>.
+ - El <datalist> contiene etiquetas <option> con los valores sugeridos.
+
+
+
+Estructura básica.
+
+
+<form>
+  <label for="ciudad">Ciudad:</label>
+  <input type="text" id="ciudad" name="ciudad" list="ciudades">
+
+  <datalist id="ciudades">
+    <option value="Bogotá">
+    <option value="Medellín">
+    <option value="Cali">
+    <option value="Barranquilla">
+  </datalist>
+</form>
+
+
+
+Ventajas
+
+ - Mejora la experiencia del usuario.
+ - No limita la entrada como un <select> (es más libre).
+ - Muy útil para autocompletar.
+
+
+Detalles técnicos
+
+ . El <option> solo necesita el atributo value, no necesita label ni contenido entre etiquetas (aunque se puede poner).
+
+
+
+ Ejemplo alternativo:
+
+
+<option value="cartagena">Cartagena</option>
+
+
+Pero este ejemplo es equivalente a:
+
+<option value="cartagena">
+
+
+ - No puedes usarlo con todos los type de <input>.
+   Funciona principalmente con:
+
+    . text
+    . search
+    . email
+    . URL
+    . tel
+    . number (en lagunos navegadores)
+
+
+..........................................................................................................
+
+
+                                                <output>
+
+
+¿Qué es <output>?
+
+La etiqueta <output> se usa para mostrar un resultado calculado dentro de un formulario.
+
+Aunque es más útil cuando se combina con JavaScript, en HTML puro todavía puedes usarla como un campo visual de salida, por ejemplo, para mostrar resultados de cálculos simples realizados por el navegador (como con <input type="range"> o formularios con atributos como oninput).
+
+
+
+Estructura básica 
+
+<form oninput="resultado.value = parseInt(a.value) + parseInt(b.value)">
+
+
+
 
 
 
