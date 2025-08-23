@@ -117,6 +117,8 @@ Horas echas de JAVA: H1
                                     H1
                                     H1 
 ------------------------------------------------     
+                                 08/22/2025
+                                    H1  
 
 
 ---------------------------------------------------------------------------------
@@ -3105,6 +3107,83 @@ Aunque es más útil cuando se combina con JavaScript, en HTML puro todavía pue
 Estructura básica 
 
 <form oninput="resultado.value = parseInt(a.value) + parseInt(b.value)">
+  <input type="number" id="a" name="a" value="0">
+  +
+  <input type="number" id="b" name="b" value="0">
+  =
+  <output name="resultado" for="a b" ></output>
+</form>
+
+¿Qué hace esto?
+
+ - Los campos <input> tienen id y valores numéricos.
+ - El atributo oninput actualiza automáticamente el contenido de <output>.
+ - <output> muestra el resultado de la suma de los dos números.
+
+
+ Atributos importantes de <output>
+
+ Atributo                                                  ¿Para qué sirve?
+
+ name                              Sirve para identificar el valor del <output> si se envía el formulario.
+
+ for                               Inidica qué elmentos <input> están relacionados con el cálculo del 
+                                   resultado. (opcional, solo informativo)
+
+ id                                Si necesitas manipular el <output> con JavaScript. No es obligatorio 
+                                   en HTML puro.
+
+
+
+
+Casos de uso posibles (sin JavaScript)
+
+Aunque <output> se pensó para usarse con JavaScript, algunas cosas puedes hacer solo con HTML, como:
+
+   . Mostrar resultados automáticos con oninput
+   . Mostrar texto estático como resultado de una acción
+   . Usarlo como marcador de lugar para futuras salidas
+
+..........................................................................................................
+
+HTML input types
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

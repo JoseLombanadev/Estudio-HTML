@@ -342,8 +342,33 @@
 <br />
 <hr />
 
-   
+    <!-- Usando <output> -->
 
+        <h2>Ejercicio propuesto (nivel inicial)</h2>
+
+        <!--
+         Objetivo: 👉🏻 Crea un formulario que tenga dos campos numéricos. cuando el usuario escriba un 
+                       número en cada campo, se debe mostrar automáticamente la suma en un <output>.
+         -->
+
+
+         <form oninput="resultado.value = parseInt(a.value) + parseInt(b.value)">
+            <input type="number" id="a" name="a" value="0">
+            + 
+            <input type="number" id="b" name="b" value="0">
+            =
+            <output name="resultado" for="a b"></output>
+         </form>
+<br />
+<hr />
+         <form>
+            <label for="color">Selecciona un color:</label>
+            <input type="color" id="color" name="color">
+         </form>
+<br />
+<hr />
+
+        
 
 
 
